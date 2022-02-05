@@ -19727,6 +19727,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1766829592452814293, guid: eaaa621b1fa8d5d49b7a2f5cc8a57021, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99282e4d46151424e86e0c4bab22d472, type: 2}
     - target: {fileID: 3550237398893570165, guid: eaaa621b1fa8d5d49b7a2f5cc8a57021, type: 3}
       propertyPath: m_Name
       value: potato bush 3
@@ -42930,6 +42934,90 @@ Transform:
   m_Father: {fileID: 2079507037}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1765229686
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -44.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 00b5876b9261e914cbd028fc2a817dd2, type: 2}
+    - target: {fileID: 919132149155446097, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+      propertyPath: m_Name
+      value: Light_Barrier
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+--- !u!1 &1765229687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 109aa0e4c2eb6424098662e8ad9b5e79, type: 3}
+  m_PrefabInstance: {fileID: 1765229686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1765229688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765229687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc814b7116f9db47bc04660770dc05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSize: 3
+  minSize: 1
+  maxSize: 6
+  speed: 2
+  m_Material: {fileID: 0}
+  emissionIntensity: 10
 --- !u!1 &1779504467
 GameObject:
   m_ObjectHideFlags: 0
