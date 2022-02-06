@@ -1,0 +1,547 @@
+Using pre-set license
+Built from '2021.2/staging' branch; Version is '2021.2.8f1 (d0e5f0a7b06a) revision 13690352'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'en' Physical Memory: 16273 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+D:\Programms\2021.2.8f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/university/group work/GitHub/29Jan
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+58009
+Successfully changed project path to: D:/university/group work/GitHub/29Jan
+D:/university/group work/GitHub/29Jan
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 194.97 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.2.8f1 (d0e5f0a7b06a)
+[Subsystems] Discovering subsystems at path D:/Programms/2021.2.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/university/group work/GitHub/29Jan/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 with Max-Q Design (ID=0x1c20)
+    Vendor:   NVIDIA
+    VRAM:     2987 MB
+    Driver:   30.0.15.1123
+Initialize mono
+Mono path[0] = 'D:/Programms/2021.2.8f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Programms/2021.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Programms/2021.2.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56868
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Programms/2021.2.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Programms/2021.2.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002674 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 140.72 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.758 seconds
+Domain Reload Profiling:
+	ReloadAssembly (759ms)
+		BeginReloadAssembly (84ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (600ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (115ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (382ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (141ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (173ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009789 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\university\group work\GitHub\29Jan\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\university\group work\GitHub\29Jan\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 922.58 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Package Manager log level set to [2]
+Mono: successfully reloaded assembly
+- Completed reload, in  6.313 seconds
+Domain Reload Profiling:
+	ReloadAssembly (6314ms)
+		BeginReloadAssembly (177ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (5982ms)
+			LoadAssemblies (159ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (819ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (122ms)
+			SetupLoadedEditorAssemblies (4805ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (923ms)
+				BeforeProcessingInitializeOnLoad (775ms)
+				ProcessInitializeOnLoadAttributes (2849ms)
+				ProcessInitializeOnLoadMethodAttributes (240ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 2.13 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6299 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 201 unused Assets / (416.9 KB). Loaded Objects now: 6719.
+Memory consumption went from 264.5 MB to 264.1 MB.
+Total: 11.344200 ms (FindLiveObjects: 1.099400 ms CreateObjectMapping: 0.889500 ms MarkObjects: 8.552200 ms  DeleteObjects: 0.800800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 254501.013313 seconds.
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(4ae238d78d7ad1842acadef09450b720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain.asset using Guid(4ae238d78d7ad1842acadef09450b720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4adf20fecf27a6255762d72ad5ac58') in 0.184163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 610.695766 seconds.
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(4ae238d78d7ad1842acadef09450b720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain.asset using Guid(4ae238d78d7ad1842acadef09450b720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '885a9df8b96bd3430b05898fa217e3d9') in 0.192880 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 510.712052 seconds.
+  path: Assets/African Bushveld Trees/Materials/NewLayer.terrainlayer
+  artifactKey: Guid(c4eff00fece485d4ea4eea4344cd9558) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Materials/NewLayer.terrainlayer using Guid(c4eff00fece485d4ea4eea4344cd9558) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbbea0d00a8ce0ab11fd0eceb4b40aef') in 0.237666 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.373975 seconds.
+  path: Assets/African Bushveld Trees/Grass textures/grass 2.png
+  artifactKey: Guid(59a600d7700b3254d85142f0bfc0f724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Grass textures/grass 2.png using Guid(59a600d7700b3254d85142f0bfc0f724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c517945fa340353abcb87976f052562') in 0.110861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/African Bushveld Trees/Grass textures/plant 2.png
+  artifactKey: Guid(4a6e619c07e423c499a508184d1a4efd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Grass textures/plant 2.png using Guid(4a6e619c07e423c499a508184d1a4efd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b47ca8c21c00f15bd0982a6e1e8592ae') in 0.135774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/African Bushveld Trees/Grass textures/grass 6.png
+  artifactKey: Guid(b179f9a6f47e9ad409a3e5e8c6071e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Grass textures/grass 6.png using Guid(b179f9a6f47e9ad409a3e5e8c6071e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '430767079bd04dda22ce9e0962663b8c') in 0.111389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/African Bushveld Trees/Grass textures/grass 5.png
+  artifactKey: Guid(42645545e6af27c4486621d302c9e0eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Grass textures/grass 5.png using Guid(42645545e6af27c4486621d302c9e0eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ca59d2c45774b7d5cc13aa9c04d9931') in 0.130001 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/African Bushveld Trees/Grass textures/plant.png
+  artifactKey: Guid(2a57d6fd8757e3d4db916b4219a0efdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Grass textures/plant.png using Guid(2a57d6fd8757e3d4db916b4219a0efdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c8b75aca54cadac50ae0dd264ece1ea') in 0.097154 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.736614 seconds.
+  path: Assets/African Bushveld Trees/Terrain textures/ash_Color.png
+  artifactKey: Guid(589d699223fae284a9a8f96ae84cfb53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Terrain textures/ash_Color.png using Guid(589d699223fae284a9a8f96ae84cfb53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2866ac48532818c3899c554e8dee9e0e') in 0.383891 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/African Bushveld Trees/Terrain textures/rock2_Base_Color.png
+  artifactKey: Guid(0d23ffa004631bb4ab8f3e0d5bfbbeaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Terrain textures/rock2_Base_Color.png using Guid(0d23ffa004631bb4ab8f3e0d5bfbbeaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '834944cc0bff6a0eb647312df79f173c') in 0.203780 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/African Bushveld Trees/Terrain textures/red sand_color.png
+  artifactKey: Guid(5fc5a25f5bdd51643aba07da7608c06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Terrain textures/red sand_color.png using Guid(5fc5a25f5bdd51643aba07da7608c06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23e9e5e05cf25b6fa861c421b7fd79aa') in 0.213584 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/African Bushveld Trees/Terrain textures/ground1_Base_Color.png
+  artifactKey: Guid(998394c1fb3928049841656b9c80a281) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Terrain textures/ground1_Base_Color.png using Guid(998394c1fb3928049841656b9c80a281) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '389650cb6d68b3bccb01c6123369e34a') in 0.185372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/African Bushveld Trees/Terrain textures/rock1_Normal.png
+  artifactKey: Guid(76c7feca089a65b47835c096a747b247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Terrain textures/rock1_Normal.png using Guid(76c7feca089a65b47835c096a747b247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0028b22f53293916876bf6c1d518c8e') in 0.188554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/African Bushveld Trees/Terrain textures/rock2_Normal.png
+  artifactKey: Guid(69d27f1f561d697479be6bab6a3247ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Terrain textures/rock2_Normal.png using Guid(69d27f1f561d697479be6bab6a3247ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73d033c09bdbe2b2f7e72570da379752') in 0.370029 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/African Bushveld Trees/Terrain textures/stones1_Base_Color.png
+  artifactKey: Guid(25922c01bc241374ea1022945862ccf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Terrain textures/stones1_Base_Color.png using Guid(25922c01bc241374ea1022945862ccf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03fe40e41d4991e97326ea13ff669c74') in 0.198195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/African Bushveld Trees/Terrain textures/rock3_Normal.png
+  artifactKey: Guid(f48f646a15e161d4dbd1276a916d63d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Terrain textures/rock3_Normal.png using Guid(f48f646a15e161d4dbd1276a916d63d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1664d427b59f2e50143f726a31c2613a') in 0.215687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/African Bushveld Trees/Terrain textures/burnt_Normal.png
+  artifactKey: Guid(60f61e472fc71fd4c81130e311732292) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Terrain textures/burnt_Normal.png using Guid(60f61e472fc71fd4c81130e311732292) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '494333f467b5dcd091dd73c7c7a9c75d') in 0.257208 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/African Bushveld Trees/Terrain textures/rock4_Normal.png
+  artifactKey: Guid(61c9a762ffe3e494db337a494cd1f01e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Terrain textures/rock4_Normal.png using Guid(61c9a762ffe3e494db337a494cd1f01e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '292081915adac99970571f056f427e71') in 0.183616 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/African Bushveld Trees/Terrain textures/rock face 6_Normal.png
+  artifactKey: Guid(44a58d314cf6dce49947028352691e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Terrain textures/rock face 6_Normal.png using Guid(44a58d314cf6dce49947028352691e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5422a46aa3cfbfaa914dc30a851f30b5') in 0.156169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.635199 seconds.
+  path: Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer.terrainlayer
+  artifactKey: Guid(143b535a025795441826e0ca2e1ae9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer.terrainlayer using Guid(143b535a025795441826e0ca2e1ae9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6338b937d02c318618451748ab24486') in 0.083216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 6.terrainlayer
+  artifactKey: Guid(f1e403bc3d773754588abdbd5d114506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 6.terrainlayer using Guid(f1e403bc3d773754588abdbd5d114506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cd20ed15664b8a3aa099f1735d5d2f8') in 0.051850 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 2.terrainlayer
+  artifactKey: Guid(c012bacabbf38db41b186ea0b66d7807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 2.terrainlayer using Guid(c012bacabbf38db41b186ea0b66d7807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11dcd4dc2c89eb6043862c27863a5b19') in 0.104481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.559347 seconds.
+  path: Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 7.terrainlayer
+  artifactKey: Guid(2dac3f682cfb72a438ee6ef5736b27c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 7.terrainlayer using Guid(2dac3f682cfb72a438ee6ef5736b27c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18bcdae35fb0891e75f98f52e616e99') in 0.079628 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 12.terrainlayer
+  artifactKey: Guid(4606c018fa891b04eb6f8d7067ca45fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 12.terrainlayer using Guid(4606c018fa891b04eb6f8d7067ca45fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68645b9f425ab8aa2ea673034b6cfd8e') in 0.096155 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 11.terrainlayer
+  artifactKey: Guid(73b0f2c8ded03584fb35681c15c05359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 11.terrainlayer using Guid(73b0f2c8ded03584fb35681c15c05359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9a96bd960d814b7cf28ac21e4c1dce9') in 0.058316 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 86.224385 seconds.
+  path: Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 4.terrainlayer
+  artifactKey: Guid(00b4d2663f384784eaaade3e2709ba0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 4.terrainlayer using Guid(00b4d2663f384784eaaade3e2709ba0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef373912582f02cef6da71e03aaaff80') in 0.022503 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.152674 seconds.
+  path: Assets/Prefabs/3_sprays.FBX
+  artifactKey: Guid(4b9cde234fc2c774e916cb85eac42b3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/3_sprays.FBX using Guid(4b9cde234fc2c774e916cb85eac42b3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29827248e1ed81425859cf5fdd0e9c6d') in 1.126085 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/StorageStuffAsset/Meshes/armycrate1.fbx
+  artifactKey: Guid(9fcc61e0acd788c4e8e40a8e822ff8ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StorageStuffAsset/Meshes/armycrate1.fbx using Guid(9fcc61e0acd788c4e8e40a8e822ff8ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd4cd0b5ddf61b6c9743ee691693cc51') in 0.049780 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/StorageStuffAsset/Prefabs/ArmyCrate2.prefab
+  artifactKey: Guid(afdcd83ff514fed468f45e1cd9f2c439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StorageStuffAsset/Prefabs/ArmyCrate2.prefab using Guid(afdcd83ff514fed468f45e1cd9f2c439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66d393219148211af7e655d99c451c09') in 0.139530 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.014255 seconds.
+  path: Assets/StorageStuffAsset/Meshes/armycrate2.fbx
+  artifactKey: Guid(1a2fcdda2b785a74a9c623ffe3a022d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StorageStuffAsset/Meshes/armycrate2.fbx using Guid(1a2fcdda2b785a74a9c623ffe3a022d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '616e7af9939161482e99d17bcbf0b3ca') in 0.060196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.504045 seconds.
+  path: Assets/EffectExamples/Fire & Explosion Effects/Prefabs/BigExplosion.prefab
+  artifactKey: Guid(e1b08032bec16ba4eb1ae23cbd572664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectExamples/Fire & Explosion Effects/Prefabs/BigExplosion.prefab using Guid(e1b08032bec16ba4eb1ae23cbd572664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd574b01b945164b311ce813eafe28b9') in 4.300555 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.237894 seconds.
+  path: Assets/Materials/hidePhysicsMaterial.physicMaterial
+  artifactKey: Guid(e00f21e1f1039774a88c67528df9c397) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/hidePhysicsMaterial.physicMaterial using Guid(e00f21e1f1039774a88c67528df9c397) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4863938ee358476ae3a8299095764673') in 0.031158 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 72.522487 seconds.
+  path: Assets/ExampleAssets/Models/brush_low.fbx
+  artifactKey: Guid(aed8c47425ab91f4eb06ce6fe47c3e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Models/brush_low.fbx using Guid(aed8c47425ab91f4eb06ce6fe47c3e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '951188e670123bf1cb2a8e8dbfcf4a9a') in 0.153703 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.710707 seconds.
+  path: Assets/Prefabs/Bucket_low.FBX
+  artifactKey: Guid(7f2754792e78ba14eb7d1055b904f804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bucket_low.FBX using Guid(7f2754792e78ba14eb7d1055b904f804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e7896d88b0018e86bacc4890423ca30') in 0.114716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.286515 seconds.
+  path: Assets/EffectExamples/Misc Effects/Models/Candle.fbx
+  artifactKey: Guid(47422950376b0d8458d22d6185bcdcb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectExamples/Misc Effects/Models/Candle.fbx using Guid(47422950376b0d8458d22d6185bcdcb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94ebd231ad289dffd08ea78a62a8f7e0') in 0.073196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 85.639160 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat
+  artifactKey: Guid(e823cd5b5d27c0f4b8256e7c12ee3e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat using Guid(e823cd5b5d27c0f4b8256e7c12ee3e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a060d271a844636307bea23b1ef17801') in 0.018070 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 224.757146 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Baobab 3.prefab
+  artifactKey: Guid(bb72c9cfa52115040b370ce9146a387e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Baobab 3.prefab using Guid(bb72c9cfa52115040b370ce9146a387e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd53d7c9235ac820124c32d344e6d6532') in 0.070263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 97.914488 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Marula 2.prefab
+  artifactKey: Guid(11bb4458f71c9cd44982e08bebbf7f36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Marula 2.prefab using Guid(11bb4458f71c9cd44982e08bebbf7f36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13b77ba42c50eab244e3cdbd66fab58c') in 0.723646 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Nyala tree 1.prefab
+  artifactKey: Guid(ce9768e2d84cb7849a493c99964201d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Nyala tree 1.prefab using Guid(ce9768e2d84cb7849a493c99964201d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f014b087acfe45d9ab53bde9d7a89d') in 0.877897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Mopane 4.prefab
+  artifactKey: Guid(a83d0d61d625e2c40911daf0ee0ae341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Mopane 4.prefab using Guid(a83d0d61d625e2c40911daf0ee0ae341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '765dfdf761292830635aead32dcfa152') in 0.308707 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Nyala tree 4.prefab
+  artifactKey: Guid(f3cd8075b9174734cb59ab528f79ab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Nyala tree 4.prefab using Guid(f3cd8075b9174734cb59ab528f79ab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8417146b55651d37b57729b42b85c4c1') in 0.514774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Nyala tree 3.prefab
+  artifactKey: Guid(e9d3768bf3ed1b747a33d2b3e3bc2fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Nyala tree 3.prefab using Guid(e9d3768bf3ed1b747a33d2b3e3bc2fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7633bc23cf432fe23fbe9b0b7c70804') in 0.765117 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Nyala tree 2.prefab
+  artifactKey: Guid(fe927918a3b6c8f41a7cc83e168bac5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Nyala tree 2.prefab using Guid(fe927918a3b6c8f41a7cc83e168bac5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f05badf9b10e49e1b30d57bef151abd') in 1.233358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 100.188024 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Pod mahogany 2.prefab
+  artifactKey: Guid(b16c82dc546f32140810738f60083405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Pod mahogany 2.prefab using Guid(b16c82dc546f32140810738f60083405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae6707fb1b531c954e217e703c6d99b1') in 0.565830 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/potato bush 2.prefab
+  artifactKey: Guid(43fada31bb61a35469f75e9caff627c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/potato bush 2.prefab using Guid(43fada31bb61a35469f75e9caff627c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ab3d1cf34ab301a8303f8219e21ed86') in 0.455086 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/rain tree 4.prefab
+  artifactKey: Guid(7deb5c09ae0893547b5573f9607eae1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/rain tree 4.prefab using Guid(7deb5c09ae0893547b5573f9607eae1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '188df03171525e3aeb73120250e3ea69') in 0.446212 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/seringa 4.prefab
+  artifactKey: Guid(6cca5b90c63c5db4aab23bde64ccec6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/seringa 4.prefab using Guid(6cca5b90c63c5db4aab23bde64ccec6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9047df38c316d3ebcf22f519a45595f') in 0.574210 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Tamboti 1.prefab
+  artifactKey: Guid(d6fe50cfa44f457428a6141d5d849519) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Tamboti 1.prefab using Guid(d6fe50cfa44f457428a6141d5d849519) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '608079f3c9ad32bef366c4e23f813f55') in 0.488919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/seringa 2.prefab
+  artifactKey: Guid(461aabd779360bb4984dd5aad37dad3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/seringa 2.prefab using Guid(461aabd779360bb4984dd5aad37dad3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd901c82dbd33d17147f11b38bd86474') in 0.407460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/potato bush 3.prefab
+  artifactKey: Guid(eaaa621b1fa8d5d49b7a2f5cc8a57021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/potato bush 3.prefab using Guid(eaaa621b1fa8d5d49b7a2f5cc8a57021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cb804e6a7a8c2dcb09b7a5c080eac5e') in 0.205239 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/potato bush 1.prefab
+  artifactKey: Guid(c1c9a54e17358134c9da409ace8778e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/potato bush 1.prefab using Guid(c1c9a54e17358134c9da409ace8778e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ef4284991edcbb7dffd83ea18582215') in 0.331428 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/raisin bush 3.prefab
+  artifactKey: Guid(28cb2f381075d984eb8e7cc201caae84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/raisin bush 3.prefab using Guid(28cb2f381075d984eb8e7cc201caae84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f99d0f43f9ae22f5a95db54a6523b714') in 0.235872 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/seringa 1.prefab
+  artifactKey: Guid(52e097504858e2e4ca9436d7b56baf34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/seringa 1.prefab using Guid(52e097504858e2e4ca9436d7b56baf34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b24eb8bd11c94e231bfc8ccf630a548a') in 0.335143 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/sausage tree 1.prefab
+  artifactKey: Guid(43ac36c5b88783c4d8a0171d1d430195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/sausage tree 1.prefab using Guid(43ac36c5b88783c4d8a0171d1d430195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af6b4d51acc0a12762e23416d19c9d9f') in 0.422934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/rain tree 2.prefab
+  artifactKey: Guid(236f55a38840b184fba16ac3b92b9bcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/rain tree 2.prefab using Guid(236f55a38840b184fba16ac3b92b9bcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '323eb904a250485d109a1ec2bec07081') in 0.446284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.917019 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Tamboti 3.prefab
+  artifactKey: Guid(e4424e929b2398f4685e61cc5e594921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Tamboti 3.prefab using Guid(e4424e929b2398f4685e61cc5e594921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da26c2d639411c499588ec7847735432') in 0.805999 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/White berry bush 4.prefab
+  artifactKey: Guid(a66553f10e36d4148a929d85af430e97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/White berry bush 4.prefab using Guid(a66553f10e36d4148a929d85af430e97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03eeb9a63167b896c83d534af7605348') in 0.399977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Weeping wattle 2.prefab
+  artifactKey: Guid(7fd7f036b04768e4dbb5d53014e69108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Weeping wattle 2.prefab using Guid(7fd7f036b04768e4dbb5d53014e69108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bc769230168a0acb0a9d9387eebeba1') in 0.377669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Weeping wattle 4.prefab
+  artifactKey: Guid(6fa63950cd4e8d447941191ea85308d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Weeping wattle 4.prefab using Guid(6fa63950cd4e8d447941191ea85308d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64b745fbc83c96b4ec2b9a1a429b4f7c') in 0.294950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/White berry bush 2.prefab
+  artifactKey: Guid(9c64a38316c8dbc4384ec0632fa5f719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/White berry bush 2.prefab using Guid(9c64a38316c8dbc4384ec0632fa5f719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c321fb71285d5d7e07e8ae587701df08') in 0.285407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 42.306904 seconds.
+  path: Assets/African Bushveld Trees/Materials/nyala tree leaf.png
+  artifactKey: Guid(d44fe22e3ca1fb1419c87af0dbb292cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Materials/nyala tree leaf.png using Guid(d44fe22e3ca1fb1419c87af0dbb292cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '325914e10f6706fa39d4a266e91ddb04') in 0.037587 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 70.811526 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Nyala tree 1.prefab
+  artifactKey: Guid(ce9768e2d84cb7849a493c99964201d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Nyala tree 1.prefab using Guid(ce9768e2d84cb7849a493c99964201d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e312275bf5b985f4f8aef27a5ce1574') in 0.118533 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 38.599168 seconds.
+  path: Assets/African Bushveld Trees/Materials/tamboti leaf.png
+  artifactKey: Guid(b34a4ececba43d74885ce7463647c70b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Materials/tamboti leaf.png using Guid(b34a4ececba43d74885ce7463647c70b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7acf046d878cb1926d07ed168935f279') in 0.053925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.594475 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Tamboti 2.prefab
+  artifactKey: Guid(43c7521c171e3194f87ed6d8a30741da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Tamboti 2.prefab using Guid(43c7521c171e3194f87ed6d8a30741da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80c683eae8eda85633cff511260a96d3') in 0.048014 seconds 
