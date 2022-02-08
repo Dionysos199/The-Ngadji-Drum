@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2021.2/staging' branch; Version is '2021.2.8f1 (d0e5f0a7b06a) revision 13690352'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'en' Physical Memory: 16273 MB
+OS: 'Windows 10  (10.0.19042) 64bit Professional' Language: 'en' Physical Memory: 16299 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-D:\Programms\2021.2.8f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2021.2.8f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/university/group work/GitHub/29Jan
+D:/Cloud/H_da/Semester_3/P3/29Jan
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51035
-Successfully changed project path to: D:/university/group work/GitHub/29Jan
-D:/university/group work/GitHub/29Jan
+50507
+Successfully changed project path to: D:/Cloud/H_da/Semester_3/P3/29Jan
+D:/Cloud/H_da/Semester_3/P3/29Jan
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,109 +47,109 @@ D:/university/group work/GitHub/29Jan
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 162.56 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 101.94 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.8f1 (d0e5f0a7b06a)
-[Subsystems] Discovering subsystems at path D:/Programms/2021.2.8f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/university/group work/GitHub/29Jan/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Cloud/H_da/Semester_3/P3/29Jan/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1060 with Max-Q Design (ID=0x1c20)
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
     Vendor:   NVIDIA
-    VRAM:     2987 MB
-    Driver:   30.0.15.1123
+    VRAM:     8043 MB
+    Driver:   30.0.14.9676
 Initialize mono
-Mono path[0] = 'D:/Programms/2021.2.8f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Programms/2021.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'D:/Programms/2021.2.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56772
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56348
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Programms/2021.2.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: D:/Programms/2021.2.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002987 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005511 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 223.56 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 100.66 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.130 seconds
+- Completed reload, in  0.523 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1130ms)
-		BeginReloadAssembly (163ms)
+	ReloadAssembly (523ms)
+		BeginReloadAssembly (56ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (854ms)
-			LoadAssemblies (162ms)
+		EndReloadAssembly (408ms)
+			LoadAssemblies (54ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (204ms)
+			SetupTypeCache (72ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (35ms)
-			SetupLoadedEditorAssemblies (526ms)
+			RebuildScriptCaches (18ms)
+			SetupLoadedEditorAssemblies (279ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (19ms)
+				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (224ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (211ms)
-				ProcessInitializeOnLoadMethodAttributes (70ms)
+				RefreshPlugins (121ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (110ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.017509 seconds.
+Registered in 0.006565 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\university\group work\GitHub\29Jan\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image D:\university\group work\GitHub\29Jan\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Cloud\H_da\Semester_3\P3\29Jan\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\Cloud\H_da\Semester_3\P3\29Jan\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 247.54 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 108.32 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Package Manager log level set to [2]
 Mono: successfully reloaded assembly
-- Completed reload, in  3.868 seconds
+- Completed reload, in  1.690 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3869ms)
-		BeginReloadAssembly (196ms)
+	ReloadAssembly (1690ms)
+		BeginReloadAssembly (85ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (3532ms)
-			LoadAssemblies (174ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (1538ms)
+			LoadAssemblies (75ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (581ms)
-			ReleaseScriptCaches (5ms)
-			RebuildScriptCaches (156ms)
-			SetupLoadedEditorAssemblies (2569ms)
+			SetupTypeCache (211ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (1160ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (248ms)
-				BeforeProcessingInitializeOnLoad (217ms)
-				ProcessInitializeOnLoadAttributes (1918ms)
-				ProcessInitializeOnLoadMethodAttributes (171ms)
-				AfterProcessingInitializeOnLoad (3ms)
+				RefreshPlugins (108ms)
+				BeforeProcessingInitializeOnLoad (101ms)
+				ProcessInitializeOnLoadAttributes (867ms)
+				ProcessInitializeOnLoadMethodAttributes (68ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.44 seconds
-Refreshing native plugins compatible for Editor in 1.56 ms, found 8 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.37 seconds
+Refreshing native plugins compatible for Editor in 1.33 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6299 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 201 unused Assets / (415.7 KB). Loaded Objects now: 6720.
-Memory consumption went from 264.8 MB to 264.4 MB.
-Total: 6.066800 ms (FindLiveObjects: 0.666700 ms CreateObjectMapping: 0.674900 ms MarkObjects: 4.265500 ms  DeleteObjects: 0.458200 ms)
+Unloading 6300 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 201 unused Assets / (415.6 KB). Loaded Objects now: 6737.
+Memory consumption went from 342.6 MB to 342.2 MB.
+Total: 4.347600 ms (FindLiveObjects: 0.378000 ms CreateObjectMapping: 0.301700 ms MarkObjects: 3.307000 ms  DeleteObjects: 0.359800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,67 +163,127 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 404247.182103 seconds.
-  path: Assets/African Bushveld Trees/Materials/nyala tree_normal.png
-  artifactKey: Guid(1205c57c4250ceb4aa8cf6737360e8b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/African Bushveld Trees/Materials/nyala tree_normal.png using Guid(1205c57c4250ceb4aa8cf6737360e8b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4543cb3d623695b6b7b854ddc8a855a8') in 0.388068 seconds 
+  Time since last request: 7337.690819 seconds.
+  path: Assets/3d-model.fbx
+  artifactKey: Guid(3f63acf8d36aabd4b8cdd6b9a68428c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3d-model.fbx using Guid(3f63acf8d36aabd4b8cdd6b9a68428c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81eeb735532c561d34c11942801ab40b') in 0.548552 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/African Bushveld Trees/Materials/marula_normal.png
-  artifactKey: Guid(a808cced5a6ee6d4c9ca6600bcb3d746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/African Bushveld Trees/Materials/marula_normal.png using Guid(a808cced5a6ee6d4c9ca6600bcb3d746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cceae723bd947915a675c090bacd7e7f') in 0.221706 seconds 
+  Time since last request: 189.980946 seconds.
+  path: Assets/Prefabs/drum.prefab
+  artifactKey: Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/drum.prefab using Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a842d91515e50380146f1090fd80c461') in 0.089107 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/African Bushveld Trees/Materials/rain tree flower.FBX
-  artifactKey: Guid(1ab028fc6cdefc24e88c6bde874a001c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/African Bushveld Trees/Materials/rain tree flower.FBX using Guid(1ab028fc6cdefc24e88c6bde874a001c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '008ea560ae6e9be388e882e445865eb7') in 1.314561 seconds 
+  Time since last request: 6.959356 seconds.
+  path: Assets/Prefabs/camera_fbx 1.FBX
+  artifactKey: Guid(44bf194de08845e41adfabe4f20ed167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/camera_fbx 1.FBX using Guid(44bf194de08845e41adfabe4f20ed167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a53442dda5b51d21ee42604f5340e76d') in 0.047768 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/African Bushveld Trees/Materials/weeping wattle_color.png
-  artifactKey: Guid(8317352e1cbbc4043b072536ffddb1a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/African Bushveld Trees/Materials/weeping wattle_color.png using Guid(8317352e1cbbc4043b072536ffddb1a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b30c34240f2b5ed299b6cd701713292') in 0.138426 seconds 
+  Time since last request: 4.364416 seconds.
+  path: Assets/Prefabs/drum.prefab
+  artifactKey: Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/drum.prefab using Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a842d91515e50380146f1090fd80c461') in 0.011709 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/African Bushveld Trees/Materials/pod mahogany leaf.FBX
-  artifactKey: Guid(e8692d0e16905974a9b505711bb67f7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/African Bushveld Trees/Materials/pod mahogany leaf.FBX using Guid(e8692d0e16905974a9b505711bb67f7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88b923b73f49a8c62ce4ad46357faf99') in 0.090302 seconds 
+  Time since last request: 9.335479 seconds.
+  path: Assets/Prefabs/001_Pedestal_high_poly.FBX
+  artifactKey: Guid(ee8a6f42239a87044af5b961fbda3eb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/001_Pedestal_high_poly.FBX using Guid(ee8a6f42239a87044af5b961fbda3eb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb865f30e2b5d05a1d72e24aa14865ef') in 0.116578 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/African Bushveld Trees/Materials/pod mahogany flower.FBX
-  artifactKey: Guid(b85692eff1ea30f408a9d7d75547aa46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/African Bushveld Trees/Materials/pod mahogany flower.FBX using Guid(b85692eff1ea30f408a9d7d75547aa46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcdf93a6cfe1d50c677493142e16006d') in 0.063038 seconds 
+  Time since last request: 26.737429 seconds.
+  path: Assets/Prefabs/drum.prefab
+  artifactKey: Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/drum.prefab using Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a842d91515e50380146f1090fd80c461') in 0.015062 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/African Bushveld Trees/Materials/tamboti_Normal.png
-  artifactKey: Guid(1ba3f1df212e5a54387220e969491483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/African Bushveld Trees/Materials/tamboti_Normal.png using Guid(1ba3f1df212e5a54387220e969491483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b50989175186935882d095a0c42856aa') in 0.196152 seconds 
+  Time since last request: 40.223483 seconds.
+  path: Assets/Prefabs/drum.prefab
+  artifactKey: Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/drum.prefab using Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a842d91515e50380146f1090fd80c461') in 0.022684 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/African Bushveld Trees/Materials/marula leaf.FBX
-  artifactKey: Guid(009669323efff654b8d5b6252b90a445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/African Bushveld Trees/Materials/marula leaf.FBX using Guid(009669323efff654b8d5b6252b90a445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88bc5c7dececa77ab8048681d3a97e4') in 0.096230 seconds 
+  Time since last request: 58.511547 seconds.
+  path: Assets/Prefabs/drum.prefab
+  artifactKey: Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/drum.prefab using Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a842d91515e50380146f1090fd80c461') in 0.010523 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/African Bushveld Trees/Materials/raisin bush bark.png
-  artifactKey: Guid(e4e0a8769d8a43e40b49cbf35c6ceb54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/African Bushveld Trees/Materials/raisin bush bark.png using Guid(e4e0a8769d8a43e40b49cbf35c6ceb54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fbbd5528b21f48f430a8953aca329ef') in 0.082714 seconds 
+  Time since last request: 29.043400 seconds.
+  path: Assets/Prefabs/drum.prefab
+  artifactKey: Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/drum.prefab using Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a842d91515e50380146f1090fd80c461') in 0.011210 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/African Bushveld Trees/Materials/seringa bark_normal.png
-  artifactKey: Guid(36b3b2bc033fb6a43b3299310267cd43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/African Bushveld Trees/Materials/seringa bark_normal.png using Guid(36b3b2bc033fb6a43b3299310267cd43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be5caa2cc4b6fa70f9502578a59288b4') in 0.085877 seconds 
+  Time since last request: 75.655904 seconds.
+  path: Assets/Prefabs/drum.prefab
+  artifactKey: Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/drum.prefab using Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a842d91515e50380146f1090fd80c461') in 0.128074 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/African Bushveld Trees/Materials/palm bark_Normal.png
-  artifactKey: Guid(7cfffc7fd6f23ed4a9057fec89f5fe71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/African Bushveld Trees/Materials/palm bark_Normal.png using Guid(7cfffc7fd6f23ed4a9057fec89f5fe71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c49d85a92fbd353ce14cd794d92063f5') in 0.174391 seconds 
+  Time since last request: 63.931285 seconds.
+  path: Assets/Prefabs/prefab_materials/head-rest.jpg
+  artifactKey: Guid(98426e6756bc36f41ab7f06c2f7a7e47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/prefab_materials/head-rest.jpg using Guid(98426e6756bc36f41ab7f06c2f7a7e47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06210f736e22fc41acbc977f0101ef4d') in 0.422169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.798191 seconds.
+  path: Assets/Prefabs/prefab_materials/headrest_mat.mat
+  artifactKey: Guid(e026f686f3bdf5240b3ca52eb51f98e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/prefab_materials/headrest_mat.mat using Guid(e026f686f3bdf5240b3ca52eb51f98e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e74899dabfa5298562afd5abcb9571') in 0.010018 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.881246 seconds.
+  path: Assets/Prefabs/prefab_materials/head-rest 1.jpg
+  artifactKey: Guid(e9376600bac75cc428ef7719a4b4d724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/prefab_materials/head-rest 1.jpg using Guid(e9376600bac75cc428ef7719a4b4d724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf1561b1bdce6ed1b3194e26cf9dc1df') in 0.081740 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.969376 seconds.
+  path: Assets/Prefabs/prefab_materials/head-rest 1.jpg
+  artifactKey: Guid(e9376600bac75cc428ef7719a4b4d724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/prefab_materials/head-rest 1.jpg using Guid(e9376600bac75cc428ef7719a4b4d724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd95f1ca5461a419645f14ac29c9d1927') in 0.035624 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.899287 seconds.
+  path: Assets/Prefabs/prefab_materials/headrest_mat.mat
+  artifactKey: Guid(e026f686f3bdf5240b3ca52eb51f98e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/prefab_materials/headrest_mat.mat using Guid(e026f686f3bdf5240b3ca52eb51f98e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35083dc6d113385517f5a2eca85164eb') in 0.081107 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.748146 seconds.
+  path: Assets/Prefabs/drum.prefab
+  artifactKey: Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/drum.prefab using Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a842d91515e50380146f1090fd80c461') in 0.147180 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.296084 seconds.
+  path: Assets/Prefabs/drum.prefab
+  artifactKey: Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/drum.prefab using Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a842d91515e50380146f1090fd80c461') in 0.037091 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.334671 seconds.
+  path: Assets/Prefabs/drum.prefab
+  artifactKey: Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/drum.prefab using Guid(a86da0332cab9434693d00aba2dd566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a842d91515e50380146f1090fd80c461') in 0.026542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.495522 seconds.
+  path: Assets/Prefabs/prefab_materials/wood dark wood.jpg
+  artifactKey: Guid(1fdbc7737811d5848af3d04df0a0de50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/prefab_materials/wood dark wood.jpg using Guid(1fdbc7737811d5848af3d04df0a0de50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7c40b9583641f44072bddc87fb2e7a9') in 0.062756 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.974163 seconds.
+  path: Assets/Prefabs/prefab_materials/stool_mat.mat
+  artifactKey: Guid(da3d33df76b30a54ebae026f1dd7938e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/prefab_materials/stool_mat.mat using Guid(da3d33df76b30a54ebae026f1dd7938e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e04b8cee1ef57c2b94f35f3842e76080') in 0.041527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.867551 seconds.
+  path: Assets/Prefabs/prefab_materials/stool_mat.mat
+  artifactKey: Guid(da3d33df76b30a54ebae026f1dd7938e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/prefab_materials/stool_mat.mat using Guid(da3d33df76b30a54ebae026f1dd7938e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f64602f44b1caa3712bc755220966ef2') in 0.029342 seconds 
