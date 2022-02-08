@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2021.2/staging' branch; Version is '2021.2.8f1 (d0e5f0a7b06a) revision 13690352'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19042) 64bit Professional' Language: 'en' Physical Memory: 16299 MB
+OS: 'Windows 11  (10.0.22000) 64bit Professional' Language: 'en' Physical Memory: 16273 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.2.8f1\Editor\Unity.exe
+D:\Programms\2021.2.8f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/Cloud/H_da/Semester_3/P3/29Jan
+D:/university/group work/GitHub/29Jan
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50874
-Successfully changed project path to: D:/Cloud/H_da/Semester_3/P3/29Jan
-D:/Cloud/H_da/Semester_3/P3/29Jan
+49471
+Successfully changed project path to: D:/university/group work/GitHub/29Jan
+D:/university/group work/GitHub/29Jan
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,60 +47,185 @@ D:/Cloud/H_da/Semester_3/P3/29Jan
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 103.22 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 146.95 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.8f1 (d0e5f0a7b06a)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Cloud/H_da/Semester_3/P3/29Jan/Assets
+[Subsystems] Discovering subsystems at path D:/Programms/2021.2.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/university/group work/GitHub/29Jan/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
+    Renderer: NVIDIA GeForce GTX 1060 with Max-Q Design (ID=0x1c20)
     Vendor:   NVIDIA
-    VRAM:     8043 MB
-    Driver:   30.0.14.9676
+    VRAM:     2987 MB
+    Driver:   30.0.15.1123
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56748
+Mono path[0] = 'D:/Programms/2021.2.8f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Programms/2021.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Programms/2021.2.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56132
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007301 seconds.
+Register platform support module: D:/Programms/2021.2.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Programms/2021.2.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002976 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 297.52 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 140.60 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.782 seconds
+- Completed reload, in  0.736 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3782ms)
-		BeginReloadAssembly (107ms)
+	ReloadAssembly (736ms)
+		BeginReloadAssembly (87ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (3551ms)
-			LoadAssemblies (108ms)
+		EndReloadAssembly (574ms)
+			LoadAssemblies (87ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1332ms)
+			SetupTypeCache (118ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (92ms)
-			SetupLoadedEditorAssemblies (1944ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (368ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (752ms)
+				InitializePlatformSupportModulesInManaged (16ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (298ms)
+				RefreshPlugins (141ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (359ms)
-				ProcessInitializeOnLoadMethodAttributes (534ms)
+				ProcessInitializeOnLoadAttributes (162ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.020889 seconds.
+Registered in 0.009979 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\university\group work\GitHub\29Jan\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\university\group work\GitHub\29Jan\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 160.73 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Package Manager log level set to [2]
+Mono: successfully reloaded assembly
+- Completed reload, in  3.614 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3615ms)
+		BeginReloadAssembly (160ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (3327ms)
+			LoadAssemblies (149ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (442ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (97ms)
+			SetupLoadedEditorAssemblies (2592ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (161ms)
+				BeforeProcessingInitializeOnLoad (218ms)
+				ProcessInitializeOnLoadAttributes (2074ms)
+				ProcessInitializeOnLoadMethodAttributes (120ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 1.38 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6299 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 201 unused Assets / (416.9 KB). Loaded Objects now: 6719.
+Memory consumption went from 264.7 MB to 264.3 MB.
+Total: 5.727400 ms (FindLiveObjects: 0.584500 ms CreateObjectMapping: 0.466700 ms MarkObjects: 4.185700 ms  DeleteObjects: 0.488700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 396668.877867 seconds.
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(4ae238d78d7ad1842acadef09450b720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain.asset using Guid(4ae238d78d7ad1842acadef09450b720) Importer(815301076,1909f56bfc062723c751e8b465ee728b) 
+ -> (artifact id: '07a3d81aa8ef16a65ce389873318d1bd') in 0.171446 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2641.280632 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Baobab 4.prefab
+  artifactKey: Guid(6ab1d7ef0692b1b4da3ed8e9566faa0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Baobab 4.prefab using Guid(6ab1d7ef0692b1b4da3ed8e9566faa0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '968dd1f2c52e572dea21f6b21047b5d0') in 0.685484 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1785.967152 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Nyala tree 2.prefab
+  artifactKey: Guid(fe927918a3b6c8f41a7cc83e168bac5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Nyala tree 2.prefab using Guid(fe927918a3b6c8f41a7cc83e168bac5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c60d8ecd4cb333030e9dcef0f3689a7') in 0.257095 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1166.909894 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Bushwillow 3.prefab
+  artifactKey: Guid(25b1e17fc7ccd974d94fa6d3f08ff228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Bushwillow 3.prefab using Guid(25b1e17fc7ccd974d94fa6d3f08ff228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa92928fd4ee47860d60f7129a2820a1') in 0.064935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/African Bushveld Trees/Prefabs/Baobab 2.prefab
+  artifactKey: Guid(e0b06605235661643ad0e3a6f16c253a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Prefabs/Baobab 2.prefab using Guid(e0b06605235661643ad0e3a6f16c253a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c3630a2085564edfe8dba3f41dbaa4c') in 0.073784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 42.343099 seconds.
+  path: Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 5.terrainlayer
+  artifactKey: Guid(4dde341a9fc638242b6668a406060e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 5.terrainlayer using Guid(4dde341a9fc638242b6668a406060e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9040ed4aa647cab8fefbee9021828f68') in 0.088602 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.793044 seconds.
+  path: Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 13.terrainlayer
+  artifactKey: Guid(505dfde9d4c389b49b02fbdacca9a4b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Demo/Terrain layers/NewLayer 13.terrainlayer using Guid(505dfde9d4c389b49b02fbdacca9a4b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04d909da40f12e825573667d742d8850') in 0.201940 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 411.724044 seconds.
+  path: Assets/African Bushveld Trees/Tree base files/Nyala tree/Nyala tree 1_meshes/Nyala tree 1_LOD1.mesh
+  artifactKey: Guid(4357762c3d2c9ad4f82571da28f61330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/African Bushveld Trees/Tree base files/Nyala tree/Nyala tree 1_meshes/Nyala tree 1_LOD1.mesh using Guid(4357762c3d2c9ad4f82571da28f61330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac2571b03e62c8dc228834dcde484059') in 0.183735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1012.148682 seconds.
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(4ae238d78d7ad1842acadef09450b720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain.asset using Guid(4ae238d78d7ad1842acadef09450b720) Importer(815301076,1909f56bfc062723c751e8b465ee728b) 
+ -> (artifact id: '24fb39839b94f8092f4ba69d523946a7') in 0.082283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.282141 seconds.
+  path: Assets/uploads_files_211415_3d-model.fbx.zip
+  artifactKey: Guid(e7d5ebd20983be845a75c3380bc20a60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uploads_files_211415_3d-model.fbx.zip using Guid(e7d5ebd20983be845a75c3380bc20a60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e68497c7d4e9c35f0460ddcda1ec5d9') in 0.075977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.706750 seconds.
+  path: Assets/3d-model.fbx
+  artifactKey: Guid(3f63acf8d36aabd4b8cdd6b9a68428c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3d-model.fbx using Guid(3f63acf8d36aabd4b8cdd6b9a68428c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e051c6f68e382ce6d6dc8cf118ff9aa0') in 1.446357 seconds 
