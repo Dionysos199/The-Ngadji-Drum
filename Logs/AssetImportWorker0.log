@@ -609,3 +609,49 @@ Received Import Request.
   path: Assets/Materials/Materials/Metal021_1K-JPG/Materials/Metal021_1K_Color.mat
   artifactKey: Guid(e0637dac88f3dc446bab8414faf1138f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Materials/Materials/Metal021_1K-JPG/Materials/Metal021_1K_Color.mat using Guid(e0637dac88f3dc446bab8414faf1138f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '260c679cec1643ae5d3fc73143a4ec08') in 0.029182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4473.959803 seconds.
+  path: Assets/Materials/Materials/PaintedPlaster014_1K-JPG/PaintedPlaster014_1K_AmbientOcclusion.jpg
+  artifactKey: Guid(bb18af4a12e9966438b4a8178053ddf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Materials/PaintedPlaster014_1K-JPG/PaintedPlaster014_1K_AmbientOcclusion.jpg using Guid(bb18af4a12e9966438b4a8178053ddf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e73f41973fa3da635c4e42d2a69810f') in 0.183578 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000365 seconds.
+  path: Assets/Materials/Materials/PaintedPlaster014_1K-JPG/PaintedPlaster014_1K_Roughness.jpg
+  artifactKey: Guid(46491226800ef214caae1f0292e8a76d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Materials/PaintedPlaster014_1K-JPG/PaintedPlaster014_1K_Roughness.jpg using Guid(46491226800ef214caae1f0292e8a76d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4db54d090c8a113b77f600364428b9a') in 0.088565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Materials/Materials/PaintedPlaster014_1K-JPG/PaintedPlaster014_1K_NormalGL.jpg
+  artifactKey: Guid(4626269bed5f7304791dfb88aaa2548a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Materials/PaintedPlaster014_1K-JPG/PaintedPlaster014_1K_NormalGL.jpg using Guid(4626269bed5f7304791dfb88aaa2548a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f2dff23eb9153efa0d92361b9c6a227') in 0.066699 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.025897 seconds.
+  path: Assets/Materials/Materials/PaintedPlaster014_1K-JPG/Materials/PaintedPlaster014_1K_Color 3.mat
+  artifactKey: Guid(175429cd9ade5884ebfed2eb59e1a002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Materials/PaintedPlaster014_1K-JPG/Materials/PaintedPlaster014_1K_Color 3.mat using Guid(175429cd9ade5884ebfed2eb59e1a002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe0a2b0cfb51cff9d58dae9fd5442792') in 0.079463 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Materials/Materials/PaintedPlaster014_1K-JPG/Materials/PaintedPlaster014_1K_Color.mat
+  artifactKey: Guid(6e17363cfa1e1a94f8ab83becfa4b70b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Materials/PaintedPlaster014_1K-JPG/Materials/PaintedPlaster014_1K_Color.mat using Guid(6e17363cfa1e1a94f8ab83becfa4b70b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '582e5032039ab52f45c907c244562832') in 0.026770 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Materials/Materials/PaintedPlaster014_1K-JPG/Materials/PaintedPlaster014_1K_Color 6.mat
+  artifactKey: Guid(92d5c5a3757969a4e9fef6295250fc8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Materials/PaintedPlaster014_1K-JPG/Materials/PaintedPlaster014_1K_Color 6.mat using Guid(92d5c5a3757969a4e9fef6295250fc8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e55db928db783868d0d133dbd4c236') in 0.041922 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Materials/Materials/PaintedPlaster014_1K-JPG/Materials/PaintedPlaster014_1K_Color 9.mat
+  artifactKey: Guid(af728a09a4df5ca4b83e1a9f5e3324c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Materials/PaintedPlaster014_1K-JPG/Materials/PaintedPlaster014_1K_Color 9.mat using Guid(af728a09a4df5ca4b83e1a9f5e3324c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df76cdd81a7cfe0ca5e49118b165579a') in 0.038436 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

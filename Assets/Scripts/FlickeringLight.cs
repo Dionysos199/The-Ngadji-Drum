@@ -21,10 +21,10 @@ public class FlickeringLight : MonoBehaviour
     {
         isFlickering = true;
         this.gameObject.GetComponent<Light>().enabled = false;
-        timeDelay = Random.Range(0.01f, 0.5f);
+        timeDelay = Random.Range(0.5f, 1.3f);
         yield return new WaitForSeconds(timeDelay);
         this.gameObject.GetComponent<Light>().enabled = true;
-        timeDelay = Random.Range(0.5f, 1.0f);
+        timeDelay = Random.Range(1.0f, 2.5f);
         yield return new WaitForSeconds(timeDelay);
         isFlickering = false;
     }
