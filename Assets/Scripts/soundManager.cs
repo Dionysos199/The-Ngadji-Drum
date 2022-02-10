@@ -58,8 +58,8 @@ public class soundManager : MonoBehaviour
 
         float distFromCenter = Vector3.Distance(hitPos, hideCenter.position);
         Debug.Log("hide center" + hideCenter);
-        drumSound.pitch = distFromCenter ;
-        drumSound.volume = hitForce;
+        drumSound.pitch = distFromCenter*2;
+        drumSound.volume = hitForce*2;
         drumSound.Play();
         Destroy(drumSoundObject, drumSound.clip.length);
     }

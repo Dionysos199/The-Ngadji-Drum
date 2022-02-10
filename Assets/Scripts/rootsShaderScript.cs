@@ -64,7 +64,7 @@ public class rootsShaderScript : MonoBehaviour
             time+=increment;
             value = 1-Mathf.Exp(-m*time)*m*time*2.7f;
             material[index].SetFloat("Vector1_7C536670", value);
-           
+
             yield return new WaitForSeconds(waitTime);
         }
     }
