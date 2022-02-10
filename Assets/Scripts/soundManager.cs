@@ -33,7 +33,7 @@ public class soundManager : MonoBehaviour
         Destroy(pokomoSoundObject, 3);
     }
     enum sounds {
-        JAPENESEDRUMSOUND, LionsRoar, PokomoSinging
+        JAPENESEDRUMSOUND, LionsRoar, PokomoSinging, treeSound
     }
     void Start()
     {
@@ -91,5 +91,21 @@ public class soundManager : MonoBehaviour
             lastChecked = inside;
             return false;
         }
+    }
+
+    public void playTheRootsGrowSounds(Transform treePos)
+    {
+        //create an instance of soundObject that is public handed in in the inspector
+        //that contains the Audiosource at the position handed in in the argument
+  
+        GameObject treeSoundObject = Instantiate(soundObject, treePos.position, Quaternion.identity);
+
+        
+        AudioSource treeSoundAudioSource = treeSoundObject.GetComponent<AudioSource>();
+
+        AudioClip treeSound= treeSoundAudioSource.clip = soundsArray[(int)sounds.treeSound] ;
+        treeSoundAudioSource.Play();
+        Debug.Log("pokomo song");
+        Destroy(treeSoundObject, treeSound.length);
     }
 }

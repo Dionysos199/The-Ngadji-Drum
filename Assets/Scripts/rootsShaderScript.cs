@@ -10,18 +10,16 @@ public class rootsShaderScript : MonoBehaviour
     public float resolution;
     public float increment=.2f;
 
-
+    public GameObject[] trees;
     public float appearingSpeed;
-   
-    AudioSource growSound;
 
+    public soundManager soundManager;
 
     private IEnumerator coroutine;
 
 
     void Start()
     {
-        growSound = GetComponent <AudioSource>();
 
         material[0].SetFloat("Vector1_7C536670", 1);
 
@@ -36,17 +34,21 @@ public class rootsShaderScript : MonoBehaviour
     public void appear(float a, Vector3 b, int index)
     {
 
-        index = index % material.Length;
+        int n = index % material.Length;
 
-        Debug.Log("index" + index);
+        Debug.Log("index" + n);
         StopAllCoroutines();
 
-        float value = material[index].GetFloat("Vector1_7C536670");
+        float value = material[n].GetFloat("Vector1_7C536670");
         if (value > 0)
         {
-            growSound.Play();
+            //iterates only within the limits of the length of the trees array
+            int p = index % trees.Length;
+            Debug.Log("p "+p);
+            //calls the fn inside the sound Manager instance attached to this object
+            soundManager.playTheRootsGrowSounds(trees[p].GetComponent<Transform>());
         }
-        coroutine = WaitAndPrint(1 / resolution, 0, appearingSpeed, index);
+        coroutine = WaitAndPrint(1 / resolution, 0, appearingSpeed, n);
         if (coroutine!= null)
         StartCoroutine(coroutine);
     }

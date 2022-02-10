@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: tree3
+  m_Name: tree3 1
   m_Shader: {fileID: 4800000, guid: a16e0f2494fb912418758c0b93a8579a, type: 3}
   m_ShaderKeywords: BOOLEAN_D063E647_ON
   m_LightmapFlags: 4
@@ -76,7 +76,7 @@ Material:
     - Boolean_D063E647: 1
     - Boolean_EA7881E1: 1
     - Vector1_26F4CBEB: 30
-    - Vector1_7C536670: 0.019550737
+    - Vector1_7C536670: 0.39993724
     - Vector1_95DB6318: 0.02
     - Vector1_B49E724D: 11.14
     - Vector1_BBB27F28: 0.01
