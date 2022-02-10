@@ -5,7 +5,7 @@ using UnityEngine.XR;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class hitdrum : UnityEvent<float, float, float>
+public class hitdrum : UnityEvent<float, Vector3, int>
 {
 
 }
@@ -17,36 +17,29 @@ public class drumInteraction : MonoBehaviour
 
 
     //public Transform explosionPrefab;
-    AudioSource drumSound;
+
     public Transform stickHead;
-    Transform hidePos;
+     Transform hidePos;
     Rigidbody stickHeadRb;
     // Start is called before the first frame update
     public float MaximumHitForce;
     private InputDevice targetDevice;
 
-    public ParticleSystem godray;
 
-    public GameObject soundObject;
-    public AudioClip[] sounds;
 
 
     float lastTime;
 
     List<InputDevice> attachedDevices;
 
-    [SerializeField] private Material myMaterial;
 
-    float numberOfHits;
+    int numberOfHits;
 
     void Start()
     {
         lastTime = Time.time;
-        hidePos = GetComponentInParent<Transform>();
-        drumSound = GetComponent<AudioSource>();
         stickHeadRb = stickHead.GetComponent<Rigidbody>();
 
-        godray = godray.GetComponent<ParticleSystem>();
 
     }
 
@@ -62,14 +55,12 @@ public class drumInteraction : MonoBehaviour
         InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.Controller, attachedDevices);
         if (attachedDevices.Count > 0)
         {
-
             targetDevice = attachedDevices[0];
         }
 
     }
     void OnCollisionEnter(Collision collision)
     {
-
         if (Time.fixedTime - lastTime > .1)
         {
 
@@ -80,29 +71,26 @@ public class drumInteraction : MonoBehaviour
 
 
                 // get the speed of the drumstick the moment it hits the drum 
-                float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude;
+                float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude/100;
 
                 ContactPoint contact = collision.GetContact(0);
                 Vector3 hitPos = contact.point;
 
+                Debug.Log("hitPos"+hitPos);
                 //calculates how far from the center of the drum we are hitting to use it
                 // to control the pitch of the emitted sound
 
-                float distFromCenter = Vector3.Distance(hitPos, hidePos.position);
 
 
-                hitDrum?.Invoke(hitForce, distFromCenter, numberOfHits);
+
+                hitDrum?.Invoke(hitForce, hitPos, numberOfHits);
 
 
-                playDrumSound(hitPos, hitForce, distFromCenter);
 
                 hapticFeedback(hitForce);
 
-                myMaterial.color = new Color(5 * distFromCenter, 0, 0);
-
-                //particle system reactiom
-                var emission = godray.emission;
-                emission.rateOverTime = Mathf.Pow(hitForce, 4);
+                // myMaterial.color = new Color(5 * distFromCenter, 0, 0);
+                
             }
         }
         lastTime = Time.fixedTime;
@@ -110,6 +98,7 @@ public class drumInteraction : MonoBehaviour
     }
     void hapticFeedback(float hitForce)
     {
+        Debug.Log("hitforce  "+hitForce);
         if (!targetDevice.isValid)
         {
             initialiseControllers();
@@ -135,19 +124,4 @@ public class drumInteraction : MonoBehaviour
                     rightController.SendHapticImpulse(0, 1, duration);
         }
     }
-    void playDrumSound(Vector3 position, float hitForce, float distanceFromCenter)
-    {
-
-        GameObject newSoundObject = Instantiate(soundObject, position, Quaternion.identity);
-        drumSound = newSoundObject.GetComponent<AudioSource>();
-
-        drumSound.clip = sounds[0];
-
-        drumSound.pitch = (distanceFromCenter * 3);
-        drumSound.volume = hitForce;
-        drumSound.Play();
-        Destroy(newSoundObject, 4);
-
-    }
-
 }

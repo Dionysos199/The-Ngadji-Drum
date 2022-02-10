@@ -76,7 +76,6 @@ public class Light_Barrier : MonoBehaviour
         // first trigger for the emission to stop when the sphere has gotten to its maximum size and the building is destroyed
         
         
-            Debug.Log("emission_Intensity" + scale_mag);
 
             Color mycolor = m_Material.color;
             m_Material.color = Color.blue;
