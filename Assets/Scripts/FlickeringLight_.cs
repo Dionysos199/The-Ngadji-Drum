@@ -8,7 +8,12 @@ public class FlickeringLight_ : MonoBehaviour
     public bool isFlickering = false;
     //public bool isHit = false;
     public float timeDelay;
+    public Material emissiveMaterial;
 
+    float normalLightEmissionIntensity =2.5f;
+    private void Start()
+    {
+    }
     void Update()
     {
       
@@ -17,15 +22,20 @@ public class FlickeringLight_ : MonoBehaviour
     public void flicker(float flickerForce, Vector3 u, int n )
     {
         StartCoroutine(Flickering(flickerForce));
-      //  Material lightEmission = GetComponentInParent<Material[]>()[1];
+     
 
     }
     IEnumerator Flickering(float FlickeringTime)
     {
         
         this.gameObject.GetComponent<Light>().enabled = false;
+
+        emissiveMaterial.SetColor("_EmissionColor", 0*Color.black);
+
         timeDelay = Random.Range(0.5f, 1.3f*FlickeringTime);
         yield return new WaitForSeconds(timeDelay);
+
+        emissiveMaterial.SetColor("_EmissionColor", normalLightEmissionIntensity  * new Color(.75f,.75f,.6f));
         this.gameObject.GetComponent<Light>().enabled = true;
         timeDelay = Random.Range(1.0f, 2.5f*FlickeringTime);
         yield return new WaitForSeconds(timeDelay);
