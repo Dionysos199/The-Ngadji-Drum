@@ -9,7 +9,6 @@ public class TriggerCollider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Audio = GetComponent<AudioSource>();
         music.SetActive(false);
     }
 
@@ -29,6 +28,7 @@ public class TriggerCollider : MonoBehaviour
         }
         else
         {
+
             music.SetActive(false);
             Audio.Stop();
         }
