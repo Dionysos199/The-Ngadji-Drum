@@ -9,7 +9,7 @@ public class VisualReaction : MonoBehaviour
 
     public float drumRadius;
 
-
+    public soundManager soundManager;
 
     [SerializeField] int m;
     [SerializeField] float amp;
@@ -18,9 +18,11 @@ public class VisualReaction : MonoBehaviour
     {
         //drum.GetComponent<Renderer>().material = reactiveMaterial;
         reactiveMaterial.DisableKeyword("_Emission");
-        reactiveMaterial.SetColor("_EmissionColor", Color.grey);
-        
+        reactiveMaterial.SetColor("_EmissionColor", 0*Color.grey);
+
     }
+
+
 
     float expFn(float dist)
     {
@@ -30,7 +32,7 @@ public class VisualReaction : MonoBehaviour
     public void glow(List<Vector3> positions, bool inside)
     {
 
-        Vector3 forwardVector = Quaternion.Euler(0, 0   , 0) * Vector3.forward;
+        Vector3 forwardVector = Quaternion.Euler(0, 0 , 0) * Vector3.forward;
      
         float distFromRHand = Vector3.Cross(forwardVector, transform.position - positions[1]).magnitude - drumRadius;
         float distFromLHand = Vector3.Cross(forwardVector, transform.position - positions[0]).magnitude - drumRadius;
@@ -41,7 +43,9 @@ public class VisualReaction : MonoBehaviour
 
         
         Debug.Log("intensity"+intensity);
-        reactiveMaterial.SetColor("_EmissionColor", intensity * Color.yellow);
+        reactiveMaterial.SetColor("_EmissionColor", intensity * Color.white);
+
+        //soundManager.playElectricWaveEffect(intensity / 10, positions[0]);
     }
 
      

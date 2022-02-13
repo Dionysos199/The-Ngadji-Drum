@@ -23,34 +23,49 @@ public class drumBodyInteraction : MonoBehaviour
 
     [SerializeField] Transform rightHand;
     bool inside;
+
+    List<Vector3> positions;
     private void Start()
     {
 
     }
+   
     private void Update()
     {
+            
+            // Debug.Log("orientation " + transform.forward);
+            Vector3 leftHandPos = leftHand.position;
 
-       // Debug.Log("orientation " + transform.forward);
-        Vector3 leftHandPos = leftHand.position;
+            Vector3 rightHandPos = rightHand.position;
 
-        Vector3 rightHandPos = rightHand.position;
+            float distToRHand = Vector3.Distance(rightHandPos, transform.position);
+            float distToLHand = Vector3.Distance(leftHandPos, transform.position);
 
-        float distToRHand = Vector3.Distance(rightHandPos, transform.position);
-        float distToLHand = Vector3.Distance(leftHandPos, transform.position);
-       // Debug.Log("distance to left Hand: "+distToLHand);
-       // Debug.Log("distance to right Hand: "+distToRHand);
-        if (distToLHand < threshold || distToRHand < threshold)
+            // Debug.Log("distance to left Hand: "+distToLHand);
+            // Debug.Log("distance to right Hand: "+distToRHand);
+            if (distToLHand < threshold || distToRHand < threshold)
+            {
+                inside = true;
+                Debug.Log("You are in the sacred zone");
+
+            }
+            else
+            {
+                inside = false;
+                Debug.Log("you are outside the sacred area");
+            }
+            positions = new List<Vector3> { leftHandPos, rightHandPos };
+
+   
+
+        if (inside==true)
         {
-            inside = true;
-            Debug.Log("You are in the sacred zone");
-        
+            insideInfluenceArea.Invoke(positions, inside);
+
+
         }
-        else
-        {
-            inside = false;
-            Debug.Log("you are outside the sacred area");
-        }
-            List<Vector3> positions = new List<Vector3>{leftHandPos, rightHandPos};
-            insideInfluenceArea.Invoke(positions,inside);
+        Debug.Log("watchout the drum");
+       
     }
+
 }

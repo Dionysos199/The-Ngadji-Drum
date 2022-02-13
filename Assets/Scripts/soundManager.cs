@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
 public class soundManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GameObject soundObject;
-    public AudioClip[] soundsArray;
-    AudioSource drumSound;
-    public Transform hideCenter;
-    public GameObject museum;
-    IEnumerator coroutine; 
+    public  GameObject soundObject;
+    public  AudioClip[] soundsArray;
+      AudioSource drumSound;
+    public  Transform hideCenter;
+    public  GameObject museum;
+    IEnumerator coroutine;
 
+
+
+  
 
     private IEnumerator playMusic(float waitTime)
     {
@@ -33,7 +39,7 @@ public class soundManager : MonoBehaviour
         Destroy(pokomoSoundObject, 3);
     }
     enum sounds {
-        JAPENESEDRUMSOUND, LionsRoar, PokomoSinging, treeSound
+        JAPENESEDRUMSOUND, LionsRoar, PokomoSinging, treeSound, nearDrumHandsEffect
     }
     void Start()
     {
@@ -45,7 +51,7 @@ public class soundManager : MonoBehaviour
     {
         
     }
-    public void playDrumSound( float hitForce, Vector3 hitPos,int a)
+    public  void playDrumSound( float hitForce, Vector3 hitPos,int a)
     {
 
         GameObject drumSoundObject = Instantiate(soundObject, hitPos, Quaternion.identity);
@@ -58,10 +64,20 @@ public class soundManager : MonoBehaviour
 
         float distFromCenter = Vector3.Distance(hitPos, hideCenter.position);
         Debug.Log("hide center" + hideCenter);
-        drumSound.pitch = distFromCenter*2;
-        drumSound.volume = hitForce*2;
+        drumSound.pitch = distFromCenter*3;
+        drumSound.volume = hitForce*3;
         drumSound.Play();
         Destroy(drumSoundObject, drumSound.clip.length);
+    }
+    public  void playElectricWaveEffect(float intensity,Vector3 position)
+    {
+        GameObject handsNearSoundEffectObject = Instantiate(soundObject, position, Quaternion.identity);
+        AudioSource electricEffectAS=handsNearSoundEffectObject.GetComponent<AudioSource>();
+        electricEffectAS.clip = soundsArray[(int)sounds.nearDrumHandsEffect];
+        electricEffectAS.Play();
+        electricEffectAS.volume = intensity;
+        Destroy(handsNearSoundEffectObject, 3);
+
     }
     public void playOutWorldlySounds(List<Vector3> positions,bool inside)
     {
