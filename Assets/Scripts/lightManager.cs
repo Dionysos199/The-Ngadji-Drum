@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class lightManager : MonoBehaviour
 {
-    public Light[] neonLightsArray;
+
     // Start is called before the first frame update
     void Start()
     {
