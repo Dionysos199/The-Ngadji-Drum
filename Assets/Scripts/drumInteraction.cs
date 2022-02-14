@@ -70,12 +70,16 @@ public class drumInteraction : MonoBehaviour
             {
                 numberOfHits++;
 
-                if (numberOfHits % 3 == 0)
+                if (numberOfHits % 5 == 0)
                 {
-                    phaseNum++;
+                    if (phaseNum < gameManager.Instance.Phases.Length)
+                    {
+                        phaseNum++;
 
-                    Debug.Log("number of Hits  " + numberOfHits + "  phaseNum " + phaseNum + "  phases count " + gameManager.Instance.Phases.Length);
-                    gameManager.Instance.Phase = gameManager.Instance.Phases[phaseNum];
+
+                        Debug.Log("number of Hits  " + numberOfHits + "  phaseNum " + phaseNum + "  phases count " + gameManager.Instance.Phases.Length);
+                        gameManager.Instance.Phase = gameManager.Instance.Phases[phaseNum];
+                    }
                 }
                 // get the speed of the drumstick the moment it hits the drum 
                 float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude / 100;

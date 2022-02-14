@@ -20,8 +20,11 @@ public class rootsShaderScript : MonoBehaviour
 
     void Start()
     {
-
-        material[0].SetFloat("Vector1_7C536670", 1);
+        foreach (var _material in material)
+        {
+            _material.SetFloat("Vector1_7C536670", 1);
+        }
+       
 
     }
 
@@ -35,25 +38,25 @@ public class rootsShaderScript : MonoBehaviour
     {
         if (gameManager.Instance.Phase=="Phase2")
         {
-            Debug.Log("Hey we reached Phase2");
-        }
-        int n = index % material.Length;
+            int n = index % material.Length;
 
-        Debug.Log("index" + n);
-        StopAllCoroutines();
+            Debug.Log("index" + n);
+            StopAllCoroutines();
 
-        float value = material[n].GetFloat("Vector1_7C536670");
-        if (value > 0)
-        {
-            //iterates only within the limits of the length of the trees array
-            int p = index % trees.Length;
-            Debug.Log("p "+p);
-            //calls the fn inside the sound Manager instance attached to this object
-            soundManager.playTheRootsGrowSounds(trees[p].GetComponent<Transform>());
+            float value = material[n].GetFloat("Vector1_7C536670");
+            if (value > 0)
+            {
+                //iterates only within the limits of the length of the trees array
+                int p = index % trees.Length;
+                Debug.Log("p " + p);
+                //calls the fn inside the sound Manager instance attached to this object
+                soundManager.playTheRootsGrowSounds(trees[p].GetComponent<Transform>());
+            }
+            coroutine = WaitAndPrint(1 / resolution, 0, appearingSpeed, n);
+            if (coroutine != null)
+                StartCoroutine(coroutine);
         }
-        coroutine = WaitAndPrint(1 / resolution, 0, appearingSpeed, n);
-        if (coroutine!= null)
-        StartCoroutine(coroutine);
+     
     }
 
 
@@ -65,7 +68,9 @@ public class rootsShaderScript : MonoBehaviour
         while(true)
         {
             time+=increment;
-            value = 1-Mathf.Exp(-m*time)*m*time*2.7f;
+            // value = 1-Mathf.Exp(-m*time)*m*time*2.7f;
+             value = Mathf.Exp( -time);
+            Debug.Log("value "+value);
             material[index].SetFloat("Vector1_7C536670", value);
 
             yield return new WaitForSeconds(waitTime);
