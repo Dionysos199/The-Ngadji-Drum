@@ -34,6 +34,7 @@ public class drumInteraction : MonoBehaviour
 
 
     int numberOfHits;
+    int phaseNum;
 
     void Start()
     {
@@ -63,12 +64,17 @@ public class drumInteraction : MonoBehaviour
     {
         if (Time.fixedTime - lastTime > .1)
         {
-
+            gameManager gameInstance =gameManager.Instance;
 
             if (collision.collider.name == "stickHead")
             {
                 numberOfHits++;
 
+                if (numberOfHits % 3 == 0)
+                {
+                    phaseNum++;
+                    gameManager.Phase = gameManager.Phases[phaseNum];
+                }
 
                 // get the speed of the drumstick the moment it hits the drum 
                 float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude/100;

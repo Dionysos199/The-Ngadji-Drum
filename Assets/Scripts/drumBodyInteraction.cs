@@ -64,7 +64,6 @@ public class drumBodyInteraction : MonoBehaviour
 
 
         }
-        Debug.Log("watchout the drum");
        
     }
 

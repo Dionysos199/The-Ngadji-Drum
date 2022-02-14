@@ -65,7 +65,7 @@ public class soundManager : MonoBehaviour
         float distFromCenter = Vector3.Distance(hitPos, hideCenter.position);
         Debug.Log("hide center" + hideCenter);
         drumSound.pitch = distFromCenter*3;
-        drumSound.volume = hitForce*3;
+        drumSound.volume = hitForce/10;
         drumSound.Play();
         Destroy(drumSoundObject, drumSound.clip.length);
     }
@@ -77,6 +77,17 @@ public class soundManager : MonoBehaviour
         electricEffectAS.Play();
         electricEffectAS.volume = intensity;
         Destroy(handsNearSoundEffectObject, 3);
+
+    }
+
+
+    public void instantiateSound( Vector3 position, AudioClip clip,float destroyAfter)
+    {
+        GameObject _soundObject = Instantiate(soundObject, position, Quaternion.identity);
+        AudioSource attachedAudio = _soundObject.GetComponent<AudioSource>();
+        attachedAudio.clip = clip;
+        attachedAudio.Play();
+        Destroy(_soundObject, destroyAfter);
 
     }
     public void playOutWorldlySounds(List<Vector3> positions,bool inside)
