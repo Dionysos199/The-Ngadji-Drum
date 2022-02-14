@@ -12,7 +12,7 @@ public class WallsReaction : MonoBehaviour
     {
 
     }
-    public void fracturesFall(float a, Vector3 b, int c)
+    public void Explode(float a, Vector3 b, int c)
     {
         Debug.Log("Hitforce" + a);
         if (a > explosionThreshold)

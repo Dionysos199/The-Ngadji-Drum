@@ -12,13 +12,15 @@ public class hitdrum : UnityEvent<float, Vector3, int>
 public class drumInteraction : MonoBehaviour
 {
 
-    [SerializeField] private hitdrum hitDrum;
+    [SerializeField] public hitdrum hitDrum;
 
 
 
     //public Transform explosionPrefab;
 
     public Transform stickHead;
+    public lightManager lightmanager;
+
     Transform hidePos;
     Rigidbody stickHeadRb;
     // Start is called before the first frame update
@@ -93,6 +95,7 @@ public class drumInteraction : MonoBehaviour
 
 
                 hitDrum?.Invoke(hitForce, hitPos, numberOfHits);
+               // lightmanager?._hitdrum.Invoke(hitForce, hitPos, numberOfHits);
 
 
                 hapticFeedback(hitForce);
