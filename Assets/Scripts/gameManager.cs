@@ -6,8 +6,8 @@ public class gameManager : MonoBehaviour
 {
 
     public static gameManager Instance { get; private set; }
-    public static string[] Phases { get; private set; }
-    public static string Phase { get;  set; }
+    public  string[] Phases { get; private set; }
+    public  string Phase { get;  set; }
     public void setPhase (float a, Vector3 v, int numberOfHits)
     {
         Phase = Phases[numberOfHits];

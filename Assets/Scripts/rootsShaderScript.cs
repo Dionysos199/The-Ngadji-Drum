@@ -33,7 +33,7 @@ public class rootsShaderScript : MonoBehaviour
 
     public void appear(float a, Vector3 b, int index)
     {
-        if (gameManager.Phase=="Phase2")
+        if (gameManager.Instance.Phase=="Phase2")
         {
             Debug.Log("Hey we reached Phase2");
         }

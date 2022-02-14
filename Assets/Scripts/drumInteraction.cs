@@ -19,7 +19,7 @@ public class drumInteraction : MonoBehaviour
     //public Transform explosionPrefab;
 
     public Transform stickHead;
-     Transform hidePos;
+    Transform hidePos;
     Rigidbody stickHeadRb;
     // Start is called before the first frame update
     public float MaximumHitForce;
@@ -64,7 +64,7 @@ public class drumInteraction : MonoBehaviour
     {
         if (Time.fixedTime - lastTime > .1)
         {
-            gameManager gameInstance =gameManager.Instance;
+
 
             if (collision.collider.name == "stickHead")
             {
@@ -73,30 +73,29 @@ public class drumInteraction : MonoBehaviour
                 if (numberOfHits % 3 == 0)
                 {
                     phaseNum++;
-                    gameManager.Phase = gameManager.Phases[phaseNum];
-                }
 
+                    Debug.Log("number of Hits  " + numberOfHits + "  phaseNum " + phaseNum + "  phases count " + gameManager.Instance.Phases.Length);
+                    gameManager.Instance.Phase = gameManager.Instance.Phases[phaseNum];
+                }
                 // get the speed of the drumstick the moment it hits the drum 
-                float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude/100;
+                float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude / 100;
 
                 ContactPoint contact = collision.GetContact(0);
                 Vector3 hitPos = contact.point;
 
-                Debug.Log("hitPos"+hitPos);
+                Debug.Log("hitPos" + hitPos);
                 //calculates how far from the center of the drum we are hitting to use it
                 // to control the pitch of the emitted sound
-
-
 
 
                 hitDrum?.Invoke(hitForce, hitPos, numberOfHits);
 
 
-
                 hapticFeedback(hitForce);
 
                 // myMaterial.color = new Color(5 * distFromCenter, 0, 0);
-                
+
+
             }
         }
         lastTime = Time.fixedTime;
@@ -104,7 +103,7 @@ public class drumInteraction : MonoBehaviour
     }
     void hapticFeedback(float hitForce)
     {
-        Debug.Log("hitforce  "+hitForce);
+        Debug.Log("hitforce  " + hitForce);
         if (!targetDevice.isValid)
         {
             initialiseControllers();
