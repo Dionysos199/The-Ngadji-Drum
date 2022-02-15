@@ -7,16 +7,76 @@ public class WallsReaction : MonoBehaviour
 {
     public GameObject toDisActivate;
     public GameObject ObjectToExplode;
+    public GameObject toShake;
+
     Rigidbody rb;
     public float MaxLifeTime;
     public float explosionThreshold;
 
 
 
-  
+    public float[] audioData = new float[512];
+
+    [HideInInspector] public AudioSource drumhitSound;
+    //this sound should be provided in runtime each time the drum is hit
+    //the sound manager has a function called playdrumhit which is a listener
+    //to the event drumhit and is called each time our drum stick hits the drum
+    //the sound manager assigns the new audiosource to this class
+    // this audiosource audioclip will be sampled and the sampling is used to animate 
+    // the different fractures of the wall like shaking 
+
+
+
+    private void Update()
+    {
+        //sampling
+        if (drumhitSound)
+        {
+
+            drumhitSound.GetSpectrumData(audioData, 0, FFTWindow.Blackman);
+            shakeAllParts();
+
+        }
+    }
+
+    void shakeAllParts()
+    {
+        int n = 0;
+        Transform[] toShakeChildren = toShake.GetComponentsInChildren<Transform>();
+        List<GameObject> childObjects = new List<GameObject>();
+     
+        foreach (Transform part in toShakeChildren)
+        {
+            n++;
+            if (part)
+            {
+                shake(part, 3.0f, audioData[n]);
+            }
+        }
+    }
+
+    void shake(Transform _object, float _frequency, float _amplitude)
+    {
+        float x = _object.transform.position.x + Mathf.Sin(Time.time * _frequency) * _amplitude * Random.Range(-1f, 1f);
+        float y = _object.transform.position.y;
+        float z = _object.transform.position.z + Mathf.Cos(Time.time * _frequency) * _amplitude * Random.Range(-1f, 1f);
+        _object.transform.position = new Vector3(x, y, z);
+
+
+        //float x = Mathf.Sin(Time.time * _frequency) * _amplitude;
+        //float y = 1;
+        //float z = Mathf.Cos(Time.time * _frequency) * _amplitude;
+        //_object.transform.localScale = new Vector3(Mathf.Abs(x), Mathf.Abs(y),Mathf.Abs(z));
+
+
+        //_object.transform.localRotation = Quaternion.Euler(20*x, y,40* z); 
+
+    }
+
     public void Explode(float hitForce, Vector3 u, int n)
     {
-        if(hitForce>explosionThreshold)
+
+        if(hitForce>explosionThreshold & gameManager.Instance.Phase=="Phase4")
         StartCoroutine(twoSteps());
 
     }

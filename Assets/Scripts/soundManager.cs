@@ -13,12 +13,14 @@ public class soundManager : MonoBehaviour
     public  AudioClip[] soundsArray;
       AudioSource drumSound;
     public  Transform hideCenter;
-    public  GameObject museum;
+
+    public WallsReaction wallReaction;
+
     IEnumerator coroutine;
 
 
 
-  
+
 
     private IEnumerator playMusic(float waitTime)
     {
@@ -41,16 +43,7 @@ public class soundManager : MonoBehaviour
     enum sounds {
         JAPENESEDRUMSOUND, LionsRoar, PokomoSinging, treeSound, nearDrumHandsEffect
     }
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public  void playDrumSound( float hitForce, Vector3 hitPos,int a)
     {
 
@@ -60,13 +53,20 @@ public class soundManager : MonoBehaviour
      
 
         drumSound.clip = soundsArray[(int)sounds.JAPENESEDRUMSOUND];
-        Debug.Log("now Playing"+drumSound.clip);
+        //Debug.Log("now Playing"+drumSound.clip);
 
+        //for getting the pitch we need the distance from the center of the hide
+        // of the hit, the further it is from the center the higher the pitch is 
         float distFromCenter = Vector3.Distance(hitPos, hideCenter.position);
-        Debug.Log("hide center" + hideCenter);
         drumSound.pitch = distFromCenter*3;
+
+        //Volume of the sound is proportionnal the speed of the hit
         drumSound.volume = hitForce/10;
         drumSound.Play();
+
+        wallReaction.drumhitSound = drumSound;
+
+
         Destroy(drumSoundObject, drumSound.clip.length);
     }
     public  void playElectricWaveEffect(float intensity,Vector3 position)
