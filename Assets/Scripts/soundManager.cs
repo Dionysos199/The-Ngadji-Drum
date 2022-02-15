@@ -40,8 +40,8 @@ public class soundManager : MonoBehaviour
         Debug.Log("pokomo song");
         Destroy(pokomoSoundObject, 3);
     }
-    enum sounds {
-        JAPENESEDRUMSOUND, LionsRoar, PokomoSinging, treeSound, nearDrumHandsEffect
+    public enum sounds {
+        JAPENESEDRUMSOUND, LionsRoar, PokomoSinging, treeSound, nearDrumHandsEffect, CRACKINGSOUND,CRUMBLEDOWN
     }
 
     public  void playDrumSound( float hitForce, Vector3 hitPos,int a)

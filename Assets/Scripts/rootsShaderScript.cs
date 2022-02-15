@@ -41,7 +41,7 @@ public class rootsShaderScript : MonoBehaviour
             int n = index % material.Length;
 
             Debug.Log("index" + n);
-            StopAllCoroutines();
+            //StopAllCoroutines();
 
             float value = material[n].GetFloat("Vector1_7C536670");
             if (value > 0)

@@ -14,7 +14,7 @@ public class outsideManger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.Instance.Phase == "Phase4")
+        if (gameManager.Instance.Phase == "Phase5")
         {
             gameObject.SetActive(true);
         }

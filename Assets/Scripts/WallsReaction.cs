@@ -13,6 +13,10 @@ public class WallsReaction : MonoBehaviour
     public float MaxLifeTime;
     public float explosionThreshold;
 
+    public GameObject[] wallsEmittingCrackingSound;
+    public soundManager soundManager;
+
+    public GameObject Outside;
 
 
     public float[] audioData = new float[512];
@@ -30,29 +34,48 @@ public class WallsReaction : MonoBehaviour
     private void Update()
     {
         //sampling
-        if (drumhitSound)
+        if (drumhitSound & gameManager.Instance.Phase == "Phase3")
         {
 
             drumhitSound.GetSpectrumData(audioData, 0, FFTWindow.Blackman);
-            shakeAllParts();
+            shakeAllParts(); 
+        
 
         }
     }
-
-    void shakeAllParts()
+    public void addCrackingSound()
     {
-        int n = 0;
-        Transform[] toShakeChildren = toShake.GetComponentsInChildren<Transform>();
-        List<GameObject> childObjects = new List<GameObject>();
-     
-        foreach (Transform part in toShakeChildren)
+        if ( gameManager.Instance.Phase == "Phase3")
         {
-            n++;
-            if (part)
+            foreach (var item in wallsEmittingCrackingSound)
             {
-                shake(part, 3.0f, audioData[n]);
+                AudioClip cracking = soundManager.soundsArray[(int)soundManager.sounds.CRACKINGSOUND];
+                soundManager.instantiateSound(item.transform.position, cracking, cracking.length);
             }
         }
+    }
+    IEnumerator instantiateCrackingSound()
+    {
+
+     
+        yield return new WaitForSeconds(Random.Range(.1f,.3f));
+    }
+    void shakeAllParts()
+    {
+       
+            int n = 0;
+            Transform[] toShakeChildren = toShake.GetComponentsInChildren<Transform>();
+            List<GameObject> childObjects = new List<GameObject>();
+
+            foreach (Transform part in toShakeChildren)
+            {
+                n++;
+                if (part)
+                {
+                    shake(part, 3.0f, audioData[n]*n);
+                }
+            }
+        
     }
 
     void shake(Transform _object, float _frequency, float _amplitude)
@@ -76,9 +99,12 @@ public class WallsReaction : MonoBehaviour
     public void Explode(float hitForce, Vector3 u, int n)
     {
 
-        if(hitForce>explosionThreshold & gameManager.Instance.Phase=="Phase4")
-        StartCoroutine(twoSteps());
-
+        if (hitForce > explosionThreshold & gameManager.Instance.Phase == "Phase4")
+        {
+            StartCoroutine(twoSteps());
+            AudioClip crumble = soundManager.soundsArray[(int)soundManager.sounds.CRUMBLEDOWN];
+            soundManager.instantiateSound(Vector3.zero, crumble, crumble.length);
+        }
     }
     IEnumerator twoSteps()
     {
@@ -108,7 +134,9 @@ public class WallsReaction : MonoBehaviour
                 Destroy(gameObject, lifeTime);
             }
         }
-
+        yield return new WaitForSeconds(4);
+        Debug.Log("now it's over");
+        Outside.SetActive(true);
     }
 }
 

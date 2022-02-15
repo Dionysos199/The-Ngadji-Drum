@@ -35,6 +35,12 @@ public class TriggerCollider : MonoBehaviour
     }
 
 
+    private void OnTriggerExit(Collider other)
+    {
+
+        music.SetActive(false);
+        Audio.Stop();
+    }
 
 
 }

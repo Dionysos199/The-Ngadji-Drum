@@ -71,6 +71,7 @@ public class drumInteraction : MonoBehaviour
             if (collision.collider.name == "stickHead")
             {
                 numberOfHits++;
+                gameManager.Instance.numberOfHits++;
 
                 if (numberOfHits % 5 == 0)
                 {
@@ -79,7 +80,7 @@ public class drumInteraction : MonoBehaviour
                         phaseNum++;
 
 
-                        Debug.Log("number of Hits  " + numberOfHits + "  phaseNum " + phaseNum + "  phases count " + gameManager.Instance.Phases.Length);
+                        Debug.Log("number of Hits  " + numberOfHits + "  phaseNum " + gameManager.Instance.Phase );
                         gameManager.Instance.Phase = gameManager.Instance.Phases[phaseNum];
                     }
                 }

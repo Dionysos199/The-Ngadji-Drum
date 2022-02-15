@@ -20,7 +20,7 @@ public class Light_Barrier : MonoBehaviour
     [SerializeField] float emissionIntensity = 10.0f;
 
     bool triggerInput = true;
-    bool triggerInput2 = false;
+   // bool triggerInput2 = false;
 
 
     void Start()
