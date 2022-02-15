@@ -47,18 +47,19 @@ public class WallsReaction : MonoBehaviour
     {
         if ( gameManager.Instance.Phase == "Phase3")
         {
-            foreach (var item in wallsEmittingCrackingSound)
-            {
-                AudioClip cracking = soundManager.soundsArray[(int)soundManager.sounds.CRACKINGSOUND];
-                soundManager.instantiateSound(item.transform.position, cracking, cracking.length);
-            }
+            StartCoroutine(instantiateCrackingSound());
         }
     }
     IEnumerator instantiateCrackingSound()
     {
+        foreach (var item in wallsEmittingCrackingSound)
+        {
+            AudioClip cracking = soundManager.soundsArray[(int)soundManager.sounds.CRACKINGSOUND];
+            soundManager.instantiateSound(item.transform.position, cracking, cracking.length);
+            yield return new WaitForSeconds(Random.Range(.1f, .3f));
+        }
 
-     
-        yield return new WaitForSeconds(Random.Range(.1f,.3f));
+
     }
     void shakeAllParts()
     {

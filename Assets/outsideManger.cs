@@ -11,12 +11,5 @@ public class outsideManger : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (gameManager.Instance.Phase == "Phase5")
-        {
-            gameObject.SetActive(true);
-        }
-    }
+
 }

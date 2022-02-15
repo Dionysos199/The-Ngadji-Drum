@@ -41,7 +41,8 @@ public class soundManager : MonoBehaviour
         Destroy(pokomoSoundObject, 3);
     }
     public enum sounds {
-        JAPENESEDRUMSOUND, LionsRoar, PokomoSinging, treeSound, nearDrumHandsEffect, CRACKINGSOUND,CRUMBLEDOWN
+        JAPENESEDRUMSOUND, LionsRoar, PokomoSinging, treeSound, nearDrumHandsEffect, CRACKINGSOUND,
+        CRUMBLEDOWN, NEONLIGHTON,ELECTRICBUZZ
     }
 
     public  void playDrumSound( float hitForce, Vector3 hitPos,int a)
