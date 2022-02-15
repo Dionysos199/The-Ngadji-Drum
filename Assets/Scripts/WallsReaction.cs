@@ -42,6 +42,10 @@ public class WallsReaction : MonoBehaviour
         
 
         }
+        if (gameManager.Instance.numberOfHits == 16)
+        {
+            Outside.SetActive(true);
+        }
     }
     public void addCrackingSound()
     {
@@ -73,7 +77,7 @@ public class WallsReaction : MonoBehaviour
                 n++;
                 if (part)
                 {
-                    shake(part, 3.0f, audioData[n]*n);
+                    shake(part, 3.0f, audioData[n]*n/5);
                 }
             }
         
@@ -135,9 +139,9 @@ public class WallsReaction : MonoBehaviour
                 Destroy(gameObject, lifeTime);
             }
         }
-        yield return new WaitForSeconds(4);
-        Debug.Log("now it's over");
+        yield return new WaitForSeconds(3);
         Outside.SetActive(true);
+        yield return null;
     }
 }
 
