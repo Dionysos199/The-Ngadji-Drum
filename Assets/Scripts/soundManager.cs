@@ -82,11 +82,12 @@ public class soundManager : MonoBehaviour
     }
 
 
-    public void instantiateSound( Vector3 position, AudioClip clip,float destroyAfter)
+    public void instantiateSound( Vector3 position, AudioClip clip,float volume, float destroyAfter)
     {
         GameObject _soundObject = Instantiate(soundObject, position, Quaternion.identity);
         AudioSource attachedAudio = _soundObject.GetComponent<AudioSource>();
         attachedAudio.clip = clip;
+        attachedAudio.volume=volume;
         attachedAudio.Play();
         Destroy(_soundObject, destroyAfter);
 

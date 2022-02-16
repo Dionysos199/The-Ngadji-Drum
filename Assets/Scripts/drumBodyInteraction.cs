@@ -46,13 +46,11 @@ public class drumBodyInteraction : MonoBehaviour
             if (distToLHand < threshold || distToRHand < threshold)
             {
                 inside = true;
-                Debug.Log("You are in the sacred zone");
 
             }
             else
             {
                 inside = false;
-                Debug.Log("you are outside the sacred area");
             }
             positions = new List<Vector3> { leftHandPos, rightHandPos };
 

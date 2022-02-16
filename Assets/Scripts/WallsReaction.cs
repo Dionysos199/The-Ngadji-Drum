@@ -59,8 +59,9 @@ public class WallsReaction : MonoBehaviour
         foreach (var item in wallsEmittingCrackingSound)
         {
             AudioClip cracking = soundManager.soundsArray[(int)soundManager.sounds.CRACKINGSOUND];
-            soundManager.instantiateSound(item.transform.position, cracking, cracking.length);
-            yield return new WaitForSeconds(Random.Range(.1f, .3f));
+            soundManager.instantiateSound(item.transform.position, cracking,.5f, cracking.length);
+
+            yield return new WaitForSeconds(Random.Range(1f, 2f));
         }
 
 
@@ -106,21 +107,47 @@ public class WallsReaction : MonoBehaviour
 
         if (hitForce > explosionThreshold & gameManager.Instance.Phase == "Phase4")
         {
-            StartCoroutine(twoSteps());
-            AudioClip crumble = soundManager.soundsArray[(int)soundManager.sounds.CRUMBLEDOWN];
-            soundManager.instantiateSound(Vector3.zero, crumble, crumble.length);
+            StartCoroutine(manySteps());
         }
     }
-    IEnumerator twoSteps()
+    IEnumerator lightAmbientIncrease()
+    {
+        RenderSettings.ambientIntensity+=1f;
+
+        yield return new WaitForSeconds(.05f) ;
+    }
+    IEnumerator decreaseAmbientLight()
+    {
+        RenderSettings.ambientIntensity-=.8f;
+
+        yield return new WaitForSeconds(.05f);
+    }
+    IEnumerator manySteps()
     {
 
-        Debug.Log("explosion");
-        toDisActivate.SetActive(false);
+        AudioClip lionsRoar = soundManager.soundsArray[(int)soundManager.sounds.LionsRoar];
+        soundManager.instantiateSound(Vector3.zero, lionsRoar, 1, lionsRoar.length);
+        StartCoroutine(lightAmbientIncrease());
+        yield return new WaitForSeconds(2);
 
-        float explosionMoment = Time.time;
+
+        StartCoroutine(decreaseAmbientLight());
+        yield return new WaitForSeconds(.5f);
+
+        Debug.Log("explosion");
+        //disactivate all the museum objects for performance sake before explosion
+        toDisActivate.SetActive(false);
 
 
         yield return new WaitForEndOfFrame();
+        explosion();
+
+        yield return new WaitForSeconds(3);
+       
+    }
+
+    void explosion()
+    {
 
         ObjectToExplode.SetActive(true);
         Transform[] toExplodeChildren = ObjectToExplode.GetComponentsInChildren<Transform>();
@@ -139,11 +166,10 @@ public class WallsReaction : MonoBehaviour
                 Destroy(gameObject, lifeTime);
             }
         }
-        yield return new WaitForSeconds(3);
-        Outside.SetActive(true);
-        yield return null;
+
+        AudioClip crumble = soundManager.soundsArray[(int)soundManager.sounds.CRUMBLEDOWN];
+        soundManager.instantiateSound(Vector3.zero, crumble,1, crumble.length);
     }
+
+
 }
-
-
-

@@ -6,6 +6,7 @@ public class TriggerCollider : MonoBehaviour
 {
     public GameObject music;
     public AudioSource Audio;
+    public Material drumEmissiveMat;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,9 @@ public class TriggerCollider : MonoBehaviour
         {
             music.gameObject.SetActive(true);
             Audio.Play();
+
+           // StartCoroutine(glowFadeIn());
+            Debug.Log("you are inside");
         }
         else
         {
@@ -37,10 +41,28 @@ public class TriggerCollider : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-
+        //StartCoroutine(glowFadeOut());
         music.SetActive(false);
         Audio.Stop();
     }
-
-
+    float intensity;
+    IEnumerator glowFadeIn()
+    {
+        while (true)
+        {
+            intensity += .1f;
+            drumEmissiveMat.SetColor("_EmissionColor", intensity * Color.white);
+            yield return new WaitForSeconds(.05f);
+        }
+      
+    }
+    IEnumerator glowFadeOut()
+    {
+        while (true)
+        {
+            intensity -= .1f;
+            drumEmissiveMat.SetColor("_EmissionColor", intensity * Color.white);
+            yield return new WaitForSeconds(.05f);
+        }
+    }
 }

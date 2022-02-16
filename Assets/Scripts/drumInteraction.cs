@@ -12,7 +12,7 @@ public class hitdrum : UnityEvent<float, Vector3, int>
 public class drumInteraction : MonoBehaviour
 {
 
-    [SerializeField] public hitdrum hitDrum;
+    public hitdrum hitDrum;
 
 
 
@@ -66,9 +66,10 @@ public class drumInteraction : MonoBehaviour
     {
         if (Time.fixedTime - lastTime > .1)
         {
+            float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude / 100;
 
 
-            if (collision.collider.name == "stickHead")
+            if (collision.collider.name == "stickHead" & hitForce>10 )
             {
                 numberOfHits++;
                 gameManager.Instance.numberOfHits++;
@@ -79,14 +80,12 @@ public class drumInteraction : MonoBehaviour
                     {
                         phaseNum++;
 
-
                         Debug.Log("number of Hits  " + numberOfHits + "  phaseNum " + gameManager.Instance.Phase );
                         gameManager.Instance.Phase = gameManager.Instance.Phases[phaseNum];
                     }
                 }
                 // get the speed of the drumstick the moment it hits the drum 
-                float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude / 100;
-
+              
                 ContactPoint contact = collision.GetContact(0);
                 Vector3 hitPos = contact.point;
 

@@ -15,15 +15,21 @@ public class FlickeringLight_ : MonoBehaviour
     private void Start()
     {
 
+        emissiveMaterial.SetColor("_EmissionColor", normalLightEmissionIntensity * new Color(.75f, .75f, .6f));
+        this.gameObject.GetComponent<Light>().enabled = true; 
     }
     void Update()
     {
       
     }
-
-    public void flicker(float flickerForce, Vector3 u, int n )
+    private void OnDisable()
     {
-        StartCoroutine(Flickering(flickerForce));
+        
+    }
+    public void flicker(float hitForce, Vector3 u, int n )
+    {
+        if(hitForce>20 & gameManager.Instance.numberOfHits>3)
+        StartCoroutine(Flickering(hitForce));
 
     }
     IEnumerator Flickering(float FlickeringTime)
@@ -32,22 +38,26 @@ public class FlickeringLight_ : MonoBehaviour
         this.gameObject.GetComponent<Light>().enabled = false;
         
         emissiveMaterial.SetColor("_EmissionColor", 0*Color.black);
+
+
         AudioClip spark= soundManager.soundsArray[(int)soundManager.sounds.ELECTRICBUZZ];
-        soundManager.instantiateSound(transform.position, spark, spark.length);
+        soundManager.instantiateSound(transform.position, spark,.5f, spark.length);
 
         ParticleSystem sparks = GetComponent<ParticleSystem>();
         sparks.Play();
-        timeDelay = Random.Range(0.1f, 1f*FlickeringTime);
+
+        timeDelay = Random.Range(0.01f, .1f)* FlickeringTime;
         
         yield return new WaitForSeconds(timeDelay);
 
         emissiveMaterial.SetColor("_EmissionColor", normalLightEmissionIntensity  * new Color(.75f,.75f,.6f));
         this.gameObject.GetComponent<Light>().enabled = true;
 
-
+        //add the light going back on sound effect
         AudioClip lightON = soundManager.soundsArray[(int)soundManager.sounds.NEONLIGHTON];
-        soundManager.instantiateSound(transform.position, lightON, lightON.length);
-        timeDelay = Random.Range(.5f, 1.5f*FlickeringTime);
+        soundManager.instantiateSound(transform.position, lightON,.5f, lightON.length);
+
+        timeDelay = Random.Range(.05f, .15f)*FlickeringTime;
         yield return new WaitForSeconds(timeDelay);
        
     }
