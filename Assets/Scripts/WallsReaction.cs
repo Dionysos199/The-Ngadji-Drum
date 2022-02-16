@@ -38,8 +38,8 @@ public class WallsReaction : MonoBehaviour
         {
 
             drumhitSound.GetSpectrumData(audioData, 0, FFTWindow.Blackman);
-            shakeAllParts(); 
-        
+            shakeAllParts();
+
 
         }
         if (gameManager.Instance.numberOfHits == 16)
@@ -49,7 +49,7 @@ public class WallsReaction : MonoBehaviour
     }
     public void addCrackingSound()
     {
-        if ( gameManager.Instance.Phase == "Phase3")
+        if (gameManager.Instance.Phase == "Phase3")
         {
             StartCoroutine(instantiateCrackingSound());
         }
@@ -59,7 +59,7 @@ public class WallsReaction : MonoBehaviour
         foreach (var item in wallsEmittingCrackingSound)
         {
             AudioClip cracking = soundManager.soundsArray[(int)soundManager.sounds.CRACKINGSOUND];
-            soundManager.instantiateSound(item.transform.position, cracking,.5f, cracking.length);
+            soundManager.instantiateSound(item.transform.position, cracking, .5f, cracking.length);
 
             yield return new WaitForSeconds(Random.Range(1f, 2f));
         }
@@ -68,20 +68,20 @@ public class WallsReaction : MonoBehaviour
     }
     void shakeAllParts()
     {
-       
-            int n = 0;
-            Transform[] toShakeChildren = toShake.GetComponentsInChildren<Transform>();
-            List<GameObject> childObjects = new List<GameObject>();
 
-            foreach (Transform part in toShakeChildren)
+        int n = 0;
+        Transform[] toShakeChildren = toShake.GetComponentsInChildren<Transform>();
+        List<GameObject> childObjects = new List<GameObject>();
+
+        foreach (Transform part in toShakeChildren)
+        {
+            n++;
+            if (part)
             {
-                n++;
-                if (part)
-                {
-                    shake(part, 3.0f, audioData[n]*n/5);
-                }
+                shake(part, Random.Range(.1f, Mathf.PI), audioData[n] * n / 5);
             }
-        
+        }
+
     }
 
     void shake(Transform _object, float _frequency, float _amplitude)
@@ -112,16 +112,28 @@ public class WallsReaction : MonoBehaviour
     }
     IEnumerator lightAmbientIncrease()
     {
-        RenderSettings.ambientIntensity+=1f;
+        while (true)
+        {
+            RenderSettings.ambientIntensity += .5f;
 
-        yield return new WaitForSeconds(.05f) ;
+            yield return new WaitForSeconds(.05f);
+
+        }
     }
     IEnumerator decreaseAmbientLight()
     {
-        RenderSettings.ambientIntensity-=.8f;
+        while (true)
+        {
 
-        yield return new WaitForSeconds(.05f);
+            RenderSettings.ambientIntensity -= 3f;
+
+            yield return new WaitForSeconds(.05f);
+        }
     }
+    //bool ambientIntensityIsNull()
+    //{
+    //        return (RenderSettings.ambientIntensity <= 0);
+    //}
     IEnumerator manySteps()
     {
 
@@ -132,18 +144,18 @@ public class WallsReaction : MonoBehaviour
 
 
         StartCoroutine(decreaseAmbientLight());
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.4f);
 
         Debug.Log("explosion");
         //disactivate all the museum objects for performance sake before explosion
         toDisActivate.SetActive(false);
 
 
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(.2f);
         explosion();
 
         yield return new WaitForSeconds(3);
-       
+
     }
 
     void explosion()
@@ -168,7 +180,7 @@ public class WallsReaction : MonoBehaviour
         }
 
         AudioClip crumble = soundManager.soundsArray[(int)soundManager.sounds.CRUMBLEDOWN];
-        soundManager.instantiateSound(Vector3.zero, crumble,1, crumble.length);
+        soundManager.instantiateSound(Vector3.zero, crumble, 1, crumble.length);
     }
 
 
