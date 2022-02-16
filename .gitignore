@@ -35,5 +35,3 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-Logs/AssetImportWorker10.log
-Logs/AssetImportWorker11.log
