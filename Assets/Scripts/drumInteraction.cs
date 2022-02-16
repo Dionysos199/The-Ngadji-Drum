@@ -69,7 +69,7 @@ public class drumInteraction : MonoBehaviour
             float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude / 100;
 
 
-            if (collision.collider.name == "stickHead" & hitForce>10 )
+            if (collision.collider.name == "stickHead" & hitForce>5 )
             {
                 numberOfHits++;
                 gameManager.Instance.numberOfHits++;

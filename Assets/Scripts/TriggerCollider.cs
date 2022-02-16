@@ -27,7 +27,8 @@ public class TriggerCollider : MonoBehaviour
             music.gameObject.SetActive(true);
             Audio.Play();
 
-           // StartCoroutine(glowFadeIn());
+            drumEmissiveMat.SetColor("_EmissionColor", 5 * Color.white);
+            StartCoroutine(glowFadeIn());
             Debug.Log("you are inside");
         }
         else
@@ -41,27 +42,30 @@ public class TriggerCollider : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        //StartCoroutine(glowFadeOut());
+        StartCoroutine(glowFadeOut());
         music.SetActive(false);
         Audio.Stop();
     }
     float intensity;
+    public float maxIntensity=4;
     IEnumerator glowFadeIn()
     {
-        while (true)
+        for (float  i = 0; i < maxIntensity; intensity +=0.1f)
         {
-            intensity += .1f;
             drumEmissiveMat.SetColor("_EmissionColor", intensity * Color.white);
+            Debug.Log("intensity drumm hihi" + intensity);
+
             yield return new WaitForSeconds(.05f);
         }
+        
       
     }
     IEnumerator glowFadeOut()
     {
-        while (true)
+        for (float i = intensity; i > 0; i -= 0.1f)
         {
-            intensity -= .1f;
             drumEmissiveMat.SetColor("_EmissionColor", intensity * Color.white);
+            Debug.Log("intensity drumm hihi" + intensity);
             yield return new WaitForSeconds(.05f);
         }
     }
