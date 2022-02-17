@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class TriggerCollider : MonoBehaviour
 {
-    public GameObject music;
-    public AudioSource Audio;
+    public GameObject drum;
+     AudioSource pokomoSinging;
     public Material drumEmissiveMat;
     // Start is called before the first frame update
     void Start()
     {
-        music.SetActive(false);
+        pokomoSinging = drum.GetComponent<AudioSource>();
+
+        pokomoSinging.Play();
+        pokomoSinging.volume = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+
     }
 
     public void OnTriggerEnter(Collider other)
@@ -24,49 +27,58 @@ public class TriggerCollider : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            music.gameObject.SetActive(true);
-            Audio.Play();
-
+            // music.gameObject.SetActive(true);
+            StartCoroutine(volumeFadeOut(.5f, 0, .001f));
             drumEmissiveMat.SetColor("_EmissionColor", 5 * Color.white);
-            StartCoroutine(glowFadeIn());
+            StartCoroutine(FadeIn(0,4,.05f));
             Debug.Log("you are inside");
         }
-        else
-        {
-
-            music.SetActive(false);
-            Audio.Stop();
-        }
+      
     }
 
 
     private void OnTriggerExit(Collider other)
     {
-        StartCoroutine(glowFadeOut());
-        music.SetActive(false);
-        Audio.Stop();
+        if (other.gameObject.tag == "Player")
+        {
+            StartCoroutine(FadeOut(4,0,.1f));
+
+        }
+        // music.SetActive(false);
     }
     float intensity;
-    public float maxIntensity=4;
-    IEnumerator glowFadeIn()
+    public float maxIntensity = 4;
+    float volume;
+    IEnumerator FadeOut(float peak ,float low,  float increment)
     {
-        for (float  i = 0; i < maxIntensity; intensity +=0.1f)
+        for (float alpha = peak; alpha >= low; alpha -= increment)
         {
-            drumEmissiveMat.SetColor("_EmissionColor", intensity * Color.white);
-            Debug.Log("intensity drumm hihi" + intensity);
+          
+            drumEmissiveMat.SetColor("_EmissionColor", alpha * Color.white);
+            yield return null;
+        }
+    }
+    IEnumerator volumeFadeOut(float peak, float low, float increment)
+    {
+        for (float alpha = peak; alpha >= low; alpha -= increment)
+        {
 
-            yield return new WaitForSeconds(.05f);
+            pokomoSinging.volume = alpha;
+            yield return null;
         }
-        
-      
     }
-    IEnumerator glowFadeOut()
+    IEnumerator FadeIn( float low, float peak, float increment )
     {
-        for (float i = intensity; i > 0; i -= 0.1f)
+        for (float alpha =low; alpha <= peak; alpha += increment)
         {
-            drumEmissiveMat.SetColor("_EmissionColor", intensity * Color.white);
-            Debug.Log("intensity drumm hihi" + intensity);
-            yield return new WaitForSeconds(.05f);
+           
+            drumEmissiveMat.SetColor("_EmissionColor", alpha * Color.white);
+            yield return null;
         }
     }
+
 }
+
+
+
+

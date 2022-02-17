@@ -1,3 +1,5 @@
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +29,8 @@ public class drumInteraction : MonoBehaviour
     public float MaximumHitForce;
     private InputDevice targetDevice;
 
+    public float hitforceThreshold = 2;
+
 
 
 
@@ -36,6 +40,7 @@ public class drumInteraction : MonoBehaviour
 
 
     int numberOfHits;
+    int phaseThreshold=5;
     int phaseNum;
 
     void Start()
@@ -69,23 +74,24 @@ public class drumInteraction : MonoBehaviour
             float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude / 100;
 
 
-            if (collision.collider.name == "stickHead" & hitForce>5 )
+            if (collision.collider.name == "stickHead" & hitForce > hitforceThreshold)
             {
                 numberOfHits++;
-                gameManager.Instance.numberOfHits++;
 
-                if (numberOfHits % 5 == 0)
+                gameManager.Instance.numberOfHits++;
+                if (numberOfHits % phaseThreshold == 0 )
                 {
+                    
                     if (phaseNum < gameManager.Instance.Phases.Length)
                     {
                         phaseNum++;
 
-                        Debug.Log("number of Hits  " + numberOfHits + "  phaseNum " + gameManager.Instance.Phase );
+                        Debug.Log("number of Hits  " + numberOfHits + "  phaseNum " + gameManager.Instance.Phase);
                         gameManager.Instance.Phase = gameManager.Instance.Phases[phaseNum];
                     }
                 }
                 // get the speed of the drumstick the moment it hits the drum 
-              
+
                 ContactPoint contact = collision.GetContact(0);
                 Vector3 hitPos = contact.point;
 
@@ -95,7 +101,7 @@ public class drumInteraction : MonoBehaviour
 
 
                 hitDrum?.Invoke(hitForce, hitPos, numberOfHits);
-               // lightmanager?._hitdrum.Invoke(hitForce, hitPos, numberOfHits);
+                // lightmanager?._hitdrum.Invoke(hitForce, hitPos, numberOfHits);
 
 
                 hapticFeedback(hitForce);

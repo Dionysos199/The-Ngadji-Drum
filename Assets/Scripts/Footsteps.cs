@@ -26,7 +26,7 @@ public class Footsteps : MonoBehaviour
         //    terrain = hit.collider.tag 
         //}
         //StartCoroutine(WalkSound());
-        if (cc.isGrounded == true && cc.velocity.magnitude > 1.0f && Audio.isPlaying == false)
+        if ( cc.velocity.magnitude > 1.0f && Audio.isPlaying == false)
         {
             //        //yield return new WaitForSeconds(2.0f);
             //        //Audio.volume = Random.Range(0.8f, 1);

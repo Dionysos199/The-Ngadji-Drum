@@ -3,7 +3,32 @@ guid: 8d7867d98405f6149b2f491e16af732c
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leather
+    second: {fileID: 2100000, guid: 888f37fd3e5921f4fa9815e722748bbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shell
+    second: {fileID: 2100000, guid: b5f37ca018cb3d24bb244f332ccf2c11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: horns
+    second: {fileID: 2100000, guid: c60b96a5c6fbad24b8e4a17b44eb23fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: horns.001
+    second: {fileID: 2100000, guid: 6a6f08db4312eda408611d5c595401c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: horns_around
+    second: {fileID: 2100000, guid: 7907574c859e23b42b9a87303fd7e1e6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

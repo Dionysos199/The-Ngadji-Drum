@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class gameManager : MonoBehaviour
 {
-
+    public Transform hideCenter;
     public static gameManager Instance { get; private set; }
     public  string[] Phases { get; private set; }
     public  string Phase { get;  set; }
@@ -35,6 +35,10 @@ public class gameManager : MonoBehaviour
     {
         Phases = new string[] { "Phase1", "Phase2", "Phase3", "Phase4", "Phase5" };
     }
+
+
+
+
 
     // Update is called once per frame
     void Update()

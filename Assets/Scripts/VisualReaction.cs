@@ -85,7 +85,7 @@ public class VisualReaction : MonoBehaviour
 
     }
 
-     
+
     /*public Material[] archive;
     public GameObject drum;
     public void displayHistory(float a, Vector3 b, int index)
@@ -94,5 +94,34 @@ public class VisualReaction : MonoBehaviour
         drum.GetComponent<Renderer>().material=archive[index];
 
     }*/
+
+
+    public Material[] artefactsMaterials;
+    float dampen=1/2 ;
+    public void glowArtefacts(float hitForce, Vector3 u, int numberOfHits)
+    {
+        float pitch = Vector3.Distance(u, gameManager.Instance.hideCenter.position);
+        Debug.Log(" yihi " + pitch);
+        if (numberOfHits>4)
+        {
+            //Color emissiveColor = new Color(pitch, 1, 1);
+            foreach (var material in artefactsMaterials)
+            {
+                Debug.Log("youhou"+ hitForce);
+                StartCoroutine(glowFadeOut(hitForce,0,.2f, material));
+            }
+        }
+    }
+    IEnumerator glowFadeOut(float peak,float low, float speed, Material material)
+    {
+        for (float alpha = peak; alpha >= low; alpha -= speed)
+        {
+
+            material.SetColor("_EmissionColor", alpha * Color.white); 
+
+            yield return null;
+        }
+    }
+
 }
 

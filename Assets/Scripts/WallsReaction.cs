@@ -42,9 +42,11 @@ public class WallsReaction : MonoBehaviour
 
 
         }
-        if (gameManager.Instance.numberOfHits == 16)
+        if (gameManager.Instance.numberOfHits == 16 )
         {
             Outside.SetActive(true);
+            GameObject floor= GameObject.FindGameObjectWithTag("Floor");
+            floor.SetActive(false);
         }
     }
     public void addCrackingSound()

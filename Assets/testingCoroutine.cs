@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class testingCoroutine : MonoBehaviour
 {
-
     float t = 0;
+    public Material cubeMateriel;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(rotateCube());
+
+        StartCoroutine(Fade());
     }
     IEnumerator rotateCube()
     {
-        
+
         transform.rotation = Quaternion.Euler(0, 10, 0);
         yield return new WaitForSeconds(1.0f);
 
@@ -25,9 +26,18 @@ public class testingCoroutine : MonoBehaviour
 
 
     }
+    IEnumerator Fade()
+    {
+        for (float alpha = 10f; alpha >= 0; alpha -= 0.1f)
+        {
+
+            cubeMateriel.SetColor("_EmissionColor", alpha * Color.white);
+            yield return null;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
