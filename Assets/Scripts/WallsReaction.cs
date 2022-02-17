@@ -42,11 +42,14 @@ public class WallsReaction : MonoBehaviour
 
 
         }
-        if (gameManager.Instance.numberOfHits == 16 )
+        if (gameManager.Instance.numberOfHits >= 20 )
         {
-            Outside.SetActive(true);
-            GameObject floor= GameObject.FindGameObjectWithTag("Floor");
-            floor.SetActive(false);
+            if (!Outside.activeSelf)
+            {
+                Outside.SetActive(true);
+                GameObject floor = GameObject.FindGameObjectWithTag("Floor");
+                floor.SetActive(false);
+            }
         }
     }
     public void addCrackingSound()
@@ -154,6 +157,7 @@ public class WallsReaction : MonoBehaviour
 
 
         yield return new WaitForSeconds(.2f);
+
         explosion();
 
         yield return new WaitForSeconds(3);

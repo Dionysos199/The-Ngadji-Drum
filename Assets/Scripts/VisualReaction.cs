@@ -75,12 +75,12 @@ public class VisualReaction : MonoBehaviour
 
 
             Debug.Log("intensity" + intensity);
-            reactiveMaterial.SetColor("_EmissionColor", intensity * Color.white);
+            reactiveMaterial.SetColor("_EmissionColor", intensity * Color.green);
 
             Light stickLight = box.GetComponent<Light>();
             stickLight.intensity = intensity+.05f;
 
-            stickreactMat.SetColor("_EmissionColor",3* intensity * Color.white);
+            stickreactMat.SetColor("_EmissionColor",3* intensity * Color.green);
             audioSource.volume = intensity;
 
         }
@@ -112,7 +112,7 @@ public class VisualReaction : MonoBehaviour
             foreach (var material in artefactsMaterials)
             {
                 Debug.Log("youhou"+ hitForce);
-                StartCoroutine(glowFadeOut(hitForce/5,-1,.2f, material));
+                StartCoroutine(glowFadeOut(hitForce/10,-1,.2f, material));
             }
         }
     }

@@ -43,6 +43,8 @@ public class drumInteraction : MonoBehaviour
     int phaseThreshold=5;
     int phaseNum;
 
+
+    bool isHit = false;
     void Start()
     {
         lastTime = Time.time;
@@ -67,52 +69,65 @@ public class drumInteraction : MonoBehaviour
         }
 
     }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "stick")
+        {
+            isHit = false;
+        }
+    }
+
     void OnCollisionEnter(Collision collision)
     {
-        if (Time.fixedTime - lastTime > .1)
+        if (!isHit)
         {
-            float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude / 100;
 
-
-            if (collision.collider.name == "stickHead" & hitForce > hitforceThreshold)
+            isHit = true;
+            if (collision.gameObject.tag == "stick")
             {
-                numberOfHits++;
+                Debug.Log("collision is detected");
+                    float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude / 100;
 
-                gameManager.Instance.numberOfHits++;
-                if (numberOfHits % phaseThreshold == 0 )
-                {
-                    
-                    if (phaseNum < gameManager.Instance.Phases.Length)
+
+                    if (hitForce > hitforceThreshold)
                     {
-                        phaseNum++;
+                        numberOfHits++;
 
-                        Debug.Log("number of Hits  " + numberOfHits + "  phaseNum " + gameManager.Instance.Phase);
-                        gameManager.Instance.Phase = gameManager.Instance.Phases[phaseNum];
+                        gameManager.Instance.numberOfHits++;
+                        if (numberOfHits % phaseThreshold == 0)
+                        {
+
+                            if (phaseNum < gameManager.Instance.Phases.Length)
+                            {
+                                phaseNum++;
+
+                                Debug.Log("number of Hits  " + numberOfHits + "  phaseNum " + gameManager.Instance.Phase);
+                                gameManager.Instance.Phase = gameManager.Instance.Phases[phaseNum];
+                            }
+                        }
+                        // get the speed of the drumstick the moment it hits the drum 
+
+                        ContactPoint contact = collision.GetContact(0);
+                        Vector3 hitPos = contact.point;
+
+                        Debug.Log("hitPos" + hitPos);
+                        //calculates how far from the center of the drum we are hitting to use it
+                        // to control the pitch of the emitted sound
+
+
+                        hitDrum?.Invoke(hitForce, hitPos, numberOfHits);
+                        // lightmanager?._hitdrum.Invoke(hitForce, hitPos, numberOfHits);
+
+
+                        hapticFeedback(hitForce);
+
+                        // myMaterial.color = new Color(5 * distFromCenter, 0, 0);
+
+
                     }
-                }
-                // get the speed of the drumstick the moment it hits the drum 
-
-                ContactPoint contact = collision.GetContact(0);
-                Vector3 hitPos = contact.point;
-
-                Debug.Log("hitPos" + hitPos);
-                //calculates how far from the center of the drum we are hitting to use it
-                // to control the pitch of the emitted sound
-
-
-                hitDrum?.Invoke(hitForce, hitPos, numberOfHits);
-                // lightmanager?._hitdrum.Invoke(hitForce, hitPos, numberOfHits);
-
-
-                hapticFeedback(hitForce);
-
-                // myMaterial.color = new Color(5 * distFromCenter, 0, 0);
-
-
+                lastTime = Time.fixedTime;
             }
         }
-        lastTime = Time.fixedTime;
-
     }
     void hapticFeedback(float hitForce)
     {
