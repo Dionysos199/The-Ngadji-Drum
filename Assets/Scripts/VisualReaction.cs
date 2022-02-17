@@ -75,12 +75,12 @@ public class VisualReaction : MonoBehaviour
 
 
             Debug.Log("intensity" + intensity);
-            reactiveMaterial.SetColor("_EmissionColor", intensity * Color.green);
+            reactiveMaterial.SetColor("_EmissionColor", intensity * Color.white);
 
             Light stickLight = box.GetComponent<Light>();
             stickLight.intensity = intensity+.05f;
 
-            stickreactMat.SetColor("_EmissionColor",3* intensity * Color.green);
+            stickreactMat.SetColor("_EmissionColor",3* intensity * Color.white);
             audioSource.volume = intensity;
 
         }
