@@ -28,6 +28,10 @@ public class VisualReaction : MonoBehaviour
         stickreactMat.SetColor("_EmissionColor", 0 * Color.grey);
         audioSource = GetComponent<AudioSource>();
 
+        foreach (var material in artefactsMaterials)
+        {
+            material.SetColor("_EmissionColor", 0* Color.white);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -102,13 +106,13 @@ public class VisualReaction : MonoBehaviour
     {
         float pitch = Vector3.Distance(u, gameManager.Instance.hideCenter.position);
         Debug.Log(" yihi " + pitch);
-        if (numberOfHits>4)
+        if (numberOfHits>2)
         {
             //Color emissiveColor = new Color(pitch, 1, 1);
             foreach (var material in artefactsMaterials)
             {
                 Debug.Log("youhou"+ hitForce);
-                StartCoroutine(glowFadeOut(hitForce,0,.2f, material));
+                StartCoroutine(glowFadeOut(hitForce/5,-1,.2f, material));
             }
         }
     }
