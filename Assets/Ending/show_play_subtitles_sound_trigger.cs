@@ -6,7 +6,7 @@ public class show_play_subtitles_sound_trigger : MonoBehaviour
 {
     public GameObject uiObject;
     public AudioSource playSound;
-    
+    public GameObject danceMusic;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class show_play_subtitles_sound_trigger : MonoBehaviour
             uiObject.SetActive(true);
             Destroy(gameObject);
             playSound.Play();
-            
+            danceMusic.GetComponent<AudioSource>().volume = .2f;
         }
     }
 

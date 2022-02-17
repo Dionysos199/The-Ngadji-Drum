@@ -7,13 +7,13 @@ public class TriggerCollider : MonoBehaviour
     public GameObject drum;
      AudioSource pokomoSinging;
     public Material drumEmissiveMat;
+    Light reactiveLight;
     // Start is called before the first frame update
     void Start()
     {
         pokomoSinging = drum.GetComponent<AudioSource>();
 
-        pokomoSinging.Play();
-        pokomoSinging.volume = 0;
+        reactiveLight = drum.GetComponent<Light>();
     }
 
     // Update is called once per frame
@@ -24,27 +24,27 @@ public class TriggerCollider : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-
-        if (other.gameObject.tag == "Player")
+        if (other.name == "Player")
         {
             // music.gameObject.SetActive(true);
-            StartCoroutine(volumeFadeOut(.5f, 0, .001f));
-            drumEmissiveMat.SetColor("_EmissionColor", 5 * Color.white);
-            StartCoroutine(FadeIn(0,4,.05f));
+            StartCoroutine(FadeIn(0, 5, .1f));
             Debug.Log("you are inside");
+            pokomoSinging.Play();
+            StartCoroutine(volumeFadeIn(0, 0.2f, .001f));
         }
       
     }
 
-
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.tag == "Player")
         {
-            StartCoroutine(FadeOut(4,0,.1f));
+            StartCoroutine(FadeOut(5, 0, .1f));
 
+            StartCoroutine(volumeFadeOut(.2f, 0, .001f));
+
+            // music.SetActive(false);
         }
-        // music.SetActive(false);
     }
     float intensity;
     public float maxIntensity = 4;
@@ -53,8 +53,16 @@ public class TriggerCollider : MonoBehaviour
     {
         for (float alpha = peak; alpha >= low; alpha -= increment)
         {
-          
-            drumEmissiveMat.SetColor("_EmissionColor", alpha * Color.white);
+            yield return null;
+        }
+    }
+   
+    IEnumerator FadeIn( float low, float peak, float increment )
+    {
+        for (float alpha =low; alpha <= peak; alpha += increment)
+        {
+
+            reactiveLight.intensity = alpha;
             yield return null;
         }
     }
@@ -67,16 +75,15 @@ public class TriggerCollider : MonoBehaviour
             yield return null;
         }
     }
-    IEnumerator FadeIn( float low, float peak, float increment )
+    IEnumerator volumeFadeIn(float low, float peak, float increment)
     {
-        for (float alpha =low; alpha <= peak; alpha += increment)
+        for (float alpha = low; alpha <= peak; alpha += increment)
         {
-           
-            drumEmissiveMat.SetColor("_EmissionColor", alpha * Color.white);
+
+            pokomoSinging.volume = alpha;
             yield return null;
         }
     }
-
 }
 
 

@@ -75,7 +75,7 @@ public class VisualReaction : MonoBehaviour
 
 
             Debug.Log("intensity" + intensity);
-            reactiveMaterial.SetColor("_EmissionColor", intensity * Color.white);
+            reactiveMaterial.SetColor("_EmissionColor", intensity/5 * Color.white);
 
             Light stickLight = box.GetComponent<Light>();
             stickLight.intensity = intensity+.05f;

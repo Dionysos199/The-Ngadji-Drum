@@ -21,6 +21,9 @@ public class WallsReaction : MonoBehaviour
 
     public float[] audioData = new float[512];
 
+
+    bool exploded=false;
+
     [HideInInspector] public AudioSource drumhitSound;
     //this sound should be provided in runtime each time the drum is hit
     //the sound manager has a function called playdrumhit which is a listener
@@ -29,20 +32,15 @@ public class WallsReaction : MonoBehaviour
     // this audiosource audioclip will be sampled and the sampling is used to animate 
     // the different fractures of the wall like shaking 
 
-
-
     private void Update()
     {
         //sampling
         if (drumhitSound & gameManager.Instance.Phase == "Phase3")
         {
-
             drumhitSound.GetSpectrumData(audioData, 0, FFTWindow.Blackman);
             shakeAllParts();
-
-
         }
-        if (gameManager.Instance.numberOfHits >= 20 )
+        if (exploded )
         {
             if (!Outside.activeSelf)
             {
@@ -160,7 +158,10 @@ public class WallsReaction : MonoBehaviour
 
         explosion();
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(6);
+
+        exploded = true;
+        Debug.Log("exploded" + exploded);
 
     }
 

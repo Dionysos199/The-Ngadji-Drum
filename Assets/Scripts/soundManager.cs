@@ -42,7 +42,7 @@ public class soundManager : MonoBehaviour
     }
     public enum sounds {
         JAPENESEDRUMSOUND, LionsRoar, PokomoSinging, treeSound, nearDrumHandsEffect, CRACKINGSOUND,
-        CRUMBLEDOWN, NEONLIGHTON,ELECTRICBUZZ
+        CRUMBLEDOWN, NEONLIGHTON,ELECTRICBUZZ, DANCEDRUMWOMENMUSIC
     }
 
     public  void playDrumSound( float hitForce, Vector3 hitPos,int a)

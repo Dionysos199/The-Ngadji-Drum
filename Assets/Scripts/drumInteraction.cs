@@ -43,8 +43,12 @@ public class drumInteraction : MonoBehaviour
     int phaseThreshold=5;
     int phaseNum;
 
+    Vector3 positionOnExit;
+    float distanceFromHitPos;
 
-    bool isHit = false;
+
+
+    bool loaded = true;
     void Start()
     {
         lastTime = Time.time;
@@ -56,7 +60,13 @@ public class drumInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        distanceFromHitPos = Vector3.Distance(positionOnExit, stickHead.position);
 
+        Debug.Log("ishit" + loaded);
+        if (distanceFromHitPos > .8)
+        {
+            loaded = true;
+        }
     }
     private void initialiseControllers()
     {
@@ -73,16 +83,17 @@ public class drumInteraction : MonoBehaviour
     {
         if (collision.gameObject.tag == "stick")
         {
-            isHit = false;
+            Debug.Log("exit collision");
+          
+            positionOnExit = stickHead.transform.position;
         }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (!isHit)
+        if (loaded)
         {
-
-            isHit = true;
+            loaded = false;
             if (collision.gameObject.tag == "stick")
             {
                 Debug.Log("collision is detected");
