@@ -49,6 +49,7 @@ public class drumInteraction : MonoBehaviour
 
 
     bool loaded = true;
+    float reloadDist=.4f;
     void Start()
     {
         lastTime = Time.time;
@@ -63,7 +64,7 @@ public class drumInteraction : MonoBehaviour
         distanceFromHitPos = Vector3.Distance(positionOnExit, stickHead.position);
 
         Debug.Log("ishit" + loaded);
-        if (distanceFromHitPos > .8)
+        if (distanceFromHitPos > reloadDist)
         {
             loaded = true;
         }

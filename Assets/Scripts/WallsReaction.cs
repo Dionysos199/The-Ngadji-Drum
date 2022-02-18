@@ -24,6 +24,8 @@ public class WallsReaction : MonoBehaviour
 
     bool exploded=false;
 
+    public GameObject danceMusic;
+
     [HideInInspector] public AudioSource drumhitSound;
     //this sound should be provided in runtime each time the drum is hit
     //the sound manager has a function called playdrumhit which is a listener
@@ -156,11 +158,14 @@ public class WallsReaction : MonoBehaviour
 
         yield return new WaitForSeconds(.2f);
 
+        danceMusic.GetComponent<AudioSource>().Stop();
         explosion();
 
         yield return new WaitForSeconds(6);
 
         exploded = true;
+
+        danceMusic.GetComponent<AudioSource>().Play();
         Debug.Log("exploded" + exploded);
 
     }

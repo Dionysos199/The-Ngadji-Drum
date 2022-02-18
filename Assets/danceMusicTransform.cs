@@ -6,16 +6,21 @@ public class danceMusicTransform : MonoBehaviour
 {
     public soundManager soundManager;
     AudioSource audioSource;
+    float volume;
 
 
+    //Listener to drumHit
     public void playDanceMusic(float hitForce, Vector3 u, int n)
     {
-        if (n%6==0)
+        
+        if (n%4==0)
         {
+            volume += .2f;
             AudioClip DanceMusic = soundManager.soundsArray[(int)soundManager.sounds.DANCEDRUMWOMENMUSIC];
             audioSource = GetComponent<AudioSource>();
             audioSource.clip = DanceMusic;
             audioSource.Play();
+            audioSource.volume = volume;
         }
 
     }

@@ -7,24 +7,46 @@ public class show_play_subtitles_sound_trigger : MonoBehaviour
     public GameObject uiObject;
     public AudioSource playSound;
     public GameObject danceMusic;
+    public lastSceneScript lastscene;
+    float startTime;
+    bool startCounting=false;
+
     // Start is called before the first frame update
     void Start()
     {
-        uiObject.SetActive(false);
+
+        //  StartCoroutine(waitBeforeReturning());
+        
         playSound.Stop();
     }
+    private void Update()
+    {
 
+        Debug.Log(CountUp(startTime) + "djnfksjnvkjn");
+        if (startCounting & CountUp(startTime)>3)
+        {
+            lastscene.returnToMuseum();
+        }
+    }
+    float CountUp(float startTime)
+    {
+        return (Time.time - startTime);
+    }
     // Update is called once per frame
     void OnTriggerEnter (Collider player)
     {
-        if (player.gameObject.tag == "Player")
-        {
-            uiObject.SetActive(true);
-            Destroy(gameObject);
+        startTime = Time.time;
+        startCounting = true;
+        Debug.Log(startCounting + "dkjvfgslkfdvnl");
+        Destroy(gameObject);
             playSound.Play();
             danceMusic.GetComponent<AudioSource>().volume = .2f;
-        }
+        
+      
+        
+
     }
 
-   
+    
+
 }

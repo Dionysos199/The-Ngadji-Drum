@@ -10,7 +10,7 @@ public class testingCoroutine : MonoBehaviour
     void Start()
     {
 
-        StartCoroutine(Fade());
+        StartCoroutine(rotateCube());
     }
     IEnumerator rotateCube()
     {
