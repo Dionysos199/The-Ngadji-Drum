@@ -37,6 +37,7 @@ public class controller : MonoBehaviour
             initialiseControllers();
         }
 
+      
         InputDevice rightController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
         rightController.TryGetFeatureValue(CommonUsages.grip, out float gripValue);
 

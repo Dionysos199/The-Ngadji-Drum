@@ -8,7 +8,7 @@ public class outsideManger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(false);
     }
 
 

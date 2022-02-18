@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class lastSceneScript : MonoBehaviour
 {
     public Light[] directionalLights;
@@ -9,19 +10,22 @@ public class lastSceneScript : MonoBehaviour
     public Transform LastPos;
     private void Update()
     {
-        if (directionalLights[0].intensity < .2 || directionalLights[1].intensity < .2)
-        {
-            GameObject Player = GameObject.FindGameObjectWithTag("Player");
-            Debug.Log("Player");
-            Player.transform.position = LastPos.transform.position;
-        }
+
+       
+
+            if (directionalLights[0].intensity < .1 || directionalLights[1].intensity < .1)
+            {
+                GameObject Player = GameObject.FindGameObjectWithTag("Player");
+                Debug.Log("Player");
+                Player.transform.position = LastPos.transform.position;
+            }
     }
     public void returnToMuseum()
     {
         float intensity1 = directionalLights[0].intensity;
         float intensity2 = directionalLights[1].intensity;
-        StartCoroutine(Blacken(intensity1, 0, .01f, directionalLights[0]));
-        StartCoroutine(Blacken(intensity2, 0, .01f, directionalLights[1]));
+        StartCoroutine(Blacken(intensity1, 0, .001f, directionalLights[0]));
+        StartCoroutine(Blacken(intensity2, 0, .001f, directionalLights[1]));
         Debug.Log("intensities" + intensity1 + "  " + intensity2);
         
     }
