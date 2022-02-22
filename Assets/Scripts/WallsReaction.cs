@@ -194,6 +194,4 @@ public class WallsReaction : MonoBehaviour
         AudioClip crumble = soundManager.soundsArray[(int)soundManager.sounds.CRUMBLEDOWN];
         soundManager.instantiateSound(Vector3.zero, crumble, 1, crumble.length);
     }
-
-
 }

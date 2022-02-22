@@ -13,7 +13,7 @@ public class danceMusicTransform : MonoBehaviour
     public void playDanceMusic(float hitForce, Vector3 u, int n)
     {
         
-        if (n%4==0)
+        if (n%5==0)
         {
             volume += .2f;
             AudioClip DanceMusic = soundManager.soundsArray[(int)soundManager.sounds.DANCEDRUMWOMENMUSIC];

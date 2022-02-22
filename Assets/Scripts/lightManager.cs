@@ -6,12 +6,10 @@ public class lightManager : MonoBehaviour
 {
     public GameObject[] lightObjects;
     public drumInteraction drumInteraction;
-
+    WallsReaction wallreaction;
     // Start is called before the first frame update
     void Start()
     {
-
-       
 
     }
     private void OnEnable()
