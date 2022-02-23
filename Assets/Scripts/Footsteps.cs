@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.XR;
 public class Footsteps : MonoBehaviour
 {
     CharacterController cc;
@@ -20,20 +20,24 @@ public class Footsteps : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        InputDevice rightController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        rightController.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 padYaxis);
+        Debug.Log("padYaxis" + padYaxis);
+        
         //RaycastHit hit;
         //if(Physics.Raycast(this.transform.position,Vector3.down,out hit))
         //{
         //    terrain = hit.collider.tag 
         //}
         //StartCoroutine(WalkSound());
-        if ( cc.velocity.magnitude > 1.0f && Audio.isPlaying == false)
+        if ( padYaxis.y > .1f && Audio.isPlaying == false)
         {
             //        //yield return new WaitForSeconds(2.0f);
             //        //Audio.volume = Random.Range(0.8f, 1);
             //        //Audio.pitch = Random.Range(0.8f,1.1f);
             //Audio.Play();
-            Audio.volume = Random.Range(0.8f, 1.0f);
-            Audio.pitch = Random.Range(0.8f, 1.1f);
+            Audio.volume = Random.Range(0.2f, .5f);
+            Audio.pitch = padYaxis.y;
             Audio.PlayDelayed(0.4f);
 
         }

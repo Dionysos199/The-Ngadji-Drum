@@ -36,13 +36,12 @@ public class show_play_subtitles_sound_trigger : MonoBehaviour
         Destroy(gameObject);
             playSound.Play();
             danceMusic.GetComponent<AudioSource>().volume = .2f;
-    
-
-
-
-
+        StartCoroutine(finalScene());
     }
-
-    
-
+    IEnumerator finalScene()
+    {
+        yield return new WaitForSeconds(2);
+        Debug.Log("go now");
+        lastscene.returnToMuseum();
+    }
 }
