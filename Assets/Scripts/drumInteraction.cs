@@ -63,7 +63,6 @@ public class drumInteraction : MonoBehaviour
     {
         distanceFromHitPos = Vector3.Distance(positionOnExit, stickHead.position);
 
-        Debug.Log("ishit" + loaded);
         if (distanceFromHitPos > reloadDist)
         {
             loaded = true;

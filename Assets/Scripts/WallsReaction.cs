@@ -32,7 +32,7 @@ public class WallsReaction : MonoBehaviour
     //to the event drumhit and is called each time our drum stick hits the drum
     //the sound manager assigns the new audiosource to this class
     // this audiosource audioclip will be sampled and the sampling is used to animate 
-    // the different fractures of the wall like shaking 
+    // the different fractures of the wall like shaking
 
     private void Update()
     {

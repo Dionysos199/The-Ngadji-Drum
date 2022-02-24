@@ -6,18 +6,28 @@ using UnityEngine;
 public class lastSceneScript : MonoBehaviour
 {
     public Light[] directionalLights;
-    public AudioSource speech;
+    public AudioSource [] sounds;
+    public GameObject toActivate;
     public Transform LastPos;
+    bool finalSceneDone=false;
     private void Update()
     {
-       
-
-            if (directionalLights[0].intensity < .1)
-            {
-                GameObject Player = GameObject.FindGameObjectWithTag("Player");
-                Debug.Log("Player");
-                Player.transform.position = LastPos.transform.position;
-            }
+        if (directionalLights[0].intensity < .1)
+            if(finalSceneDone== false)
+        {
+            GameObject Player = GameObject.FindGameObjectWithTag("Player");
+            Debug.Log("Player");
+            Player.transform.position = LastPos.transform.position;
+            StartCoroutine(switchScenes());
+            finalSceneDone = true;
+        }
+    }
+    IEnumerator switchScenes()
+    {
+        yield return null;
+        outsideManger outside = FindObjectOfType<outsideManger>();
+        outside.gameObject.SetActive(false);
+        toActivate.SetActive(true);
     }
     public void returnToMuseum()
     {
@@ -25,7 +35,7 @@ public class lastSceneScript : MonoBehaviour
         float intensity2 = directionalLights[1].intensity;
         StartCoroutine(Blacken(intensity1, 0, .01f, directionalLights[0]));
         StartCoroutine(Blacken(intensity2, 0, .01f, directionalLights[1]));
-
+        
         Debug.Log("intensities" + intensity1 + "  " + intensity2);
         
     }
@@ -36,7 +46,10 @@ public class lastSceneScript : MonoBehaviour
         {
             light.intensity = alpha;
 
-            speech.volume = alpha;
+            foreach (var sound in sounds)
+            {
+                sound.volume = alpha;
+            }
             yield return null;
         }
     }

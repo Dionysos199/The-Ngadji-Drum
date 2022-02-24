@@ -21,13 +21,7 @@ public class show_play_subtitles_sound_trigger : MonoBehaviour
     }
     private void Update()
     {
-        InputDevice rightController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
-        rightController.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
-        Debug.Log("TRIGGER VALUE" + triggerValue);
-        if (triggerValue == 1)
-        {
-            lastscene.returnToMuseum();
-        }
+      
     }
    
     // Update is called once per frame
