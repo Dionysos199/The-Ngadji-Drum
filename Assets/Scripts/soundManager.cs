@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+//In the futur this class should be turned into a singleton and worked better
+// there's a code repetition problem in the functions
 
 public class soundManager : MonoBehaviour
 {
@@ -19,7 +20,13 @@ public class soundManager : MonoBehaviour
     IEnumerator coroutine;
 
 
-
+    //ENUMS ARE GREAT!!!
+    //LONG LIVE THE ENUMS!
+    public enum sounds
+    {
+        JAPENESEDRUMSOUND, LionsRoar, PokomoSinging, treeSound, nearDrumHandsEffect, CRACKINGSOUND,
+        CRUMBLEDOWN, NEONLIGHTON, ELECTRICBUZZ, DANCEDRUMWOMENMUSIC
+    }
 
 
     private IEnumerator playMusic(float waitTime)
@@ -31,6 +38,7 @@ public class soundManager : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
         }
     }
+
     void playThePokomoSinging()
     {
         GameObject pokomoSoundObject = Instantiate(soundObject, new Vector3(10, 0, 10), Quaternion.identity);
@@ -39,10 +47,6 @@ public class soundManager : MonoBehaviour
         drumSound.Play();
         Debug.Log("pokomo song");
         Destroy(pokomoSoundObject, 3);
-    }
-    public enum sounds {
-        JAPENESEDRUMSOUND, LionsRoar, PokomoSinging, treeSound, nearDrumHandsEffect, CRACKINGSOUND,
-        CRUMBLEDOWN, NEONLIGHTON,ELECTRICBUZZ, DANCEDRUMWOMENMUSIC
     }
 
     public  void playDrumSound( float hitForce, Vector3 hitPos,int a)
@@ -70,6 +74,7 @@ public class soundManager : MonoBehaviour
 
         Destroy(drumSoundObject, drumSound.clip.length);
     }
+
     public  void playElectricWaveEffect(float intensity,Vector3 position)
     {
         GameObject handsNearSoundEffectObject = Instantiate(soundObject, position, Quaternion.identity);

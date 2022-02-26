@@ -37,9 +37,10 @@ public class WallsReaction : MonoBehaviour
     private void Update()
     {
         //sampling
-        if (drumhitSound & gameManager.Instance.Phase == "Phase3")
+        if (drumhitSound & gameManager.Instance.Phase == "Phase3")// we check if we are in the 3rd phase 
         {
             drumhitSound.GetSpectrumData(audioData, 0, FFTWindow.Blackman);
+            //Fast Fourier Transformation and stores the amplitudes of the different frequencies in the array audiodata
             shakeAllParts();
         }
         if (exploded )
@@ -63,7 +64,7 @@ public class WallsReaction : MonoBehaviour
     {
         foreach (var item in wallsEmittingCrackingSound)
         {
-            AudioClip cracking = soundManager.soundsArray[(int)soundManager.sounds.CRACKINGSOUND];
+            AudioClip cracking = soundManager.soundsArray[(int)soundManager.sounds.CRACKINGSOUND];//used enum
             soundManager.instantiateSound(item.transform.position, cracking, .5f, cracking.length);
 
             yield return new WaitForSeconds(Random.Range(1f, 2f));
@@ -89,7 +90,7 @@ public class WallsReaction : MonoBehaviour
 
     }
 
-    void shake(Transform _object, float _frequency, float _amplitude)
+    void shake(Transform _object, float _frequency, float _amplitude) //the amplitude is fed from the audio sampled data in shakeall
     {
         float x = _object.transform.position.x + Mathf.Sin(Time.time * _frequency) * _amplitude * Random.Range(-1f, 1f);
         float y = _object.transform.position.y;
@@ -107,6 +108,7 @@ public class WallsReaction : MonoBehaviour
 
     }
 
+    // This function is a listener to the hitdrum UnityEvent and will be called when Phase is reached 
     public void Explode(float hitForce, Vector3 u, int n)
     {
 
@@ -115,6 +117,8 @@ public class WallsReaction : MonoBehaviour
             StartCoroutine(manySteps());
         }
     }
+
+    // this coroutine is called right befor the explosion effect and increases dramatically the ambient light 
     IEnumerator lightAmbientIncrease()
     {
         while (true)
@@ -141,24 +145,29 @@ public class WallsReaction : MonoBehaviour
     //}
     IEnumerator manySteps()
     {
-
+        // step one Make the lions roar 
+        //Increase the lights dramattically 
         AudioClip lionsRoar = soundManager.soundsArray[(int)soundManager.sounds.LionsRoar];
         soundManager.instantiateSound(Vector3.zero, lionsRoar, 1, lionsRoar.length);
         StartCoroutine(lightAmbientIncrease());
         yield return new WaitForSeconds(2);
 
-
+        //step 2 decrease the lights again
         StartCoroutine(decreaseAmbientLight());
         yield return new WaitForSeconds(.4f);
 
-        Debug.Log("explosion");
+
+        // step3 
         //disactivate all the museum objects for performance sake before explosion
+        //After many tests. I can confirm that adding more than a thousand collider and rigid bodies on the scene
+        // will definetly cause the pc to hang up. It super performance demanding
         toDisActivate.SetActive(false);
-
-
         yield return new WaitForSeconds(.2f);
 
+        //step 4
+        //we stop the background women chanting and dancing music
         danceMusic.GetComponent<AudioSource>().Stop();
+        // explode
         explosion();
 
         yield return new WaitForSeconds(6);
@@ -174,7 +183,17 @@ public class WallsReaction : MonoBehaviour
     {
 
         ObjectToExplode.SetActive(true);
+        // after setting disactive all the museum parts
+        // we set to true the setactive of few fractured wall
+        // creating the illusion that the museum exploded 
+
         Transform[] toExplodeChildren = ObjectToExplode.GetComponentsInChildren<Transform>();
+
+        // run through all the children of the of the fratured wall object called objectToExplode
+        // we add rigidBodies to all the pieces and box collider
+        //And SYRPRISINGLY that's enough
+        // the box colliders will repell each other with such a force resulting in a spectacular explosion
+
         List<GameObject> childObjects = new List<GameObject>();
         foreach (Transform child in toExplodeChildren)
         {
@@ -191,6 +210,7 @@ public class WallsReaction : MonoBehaviour
             }
         }
 
+        // adds the fall down and crumble of the museum sound effect
         AudioClip crumble = soundManager.soundsArray[(int)soundManager.sounds.CRUMBLEDOWN];
         soundManager.instantiateSound(Vector3.zero, crumble, 1, crumble.length);
     }

@@ -26,18 +26,9 @@ public class drumInteraction : MonoBehaviour
     Transform hidePos;
     Rigidbody stickHeadRb;
     // Start is called before the first frame update
-    public float MaximumHitForce;
     private InputDevice targetDevice;
 
     public float hitforceThreshold = 2;
-
-
-
-
-    float lastTime;
-
-    List<InputDevice> attachedDevices;
-
 
     int numberOfHits;
     int phaseThreshold=5;
@@ -52,7 +43,6 @@ public class drumInteraction : MonoBehaviour
     float reloadDist=.4f;
     void Start()
     {
-        lastTime = Time.time;
         stickHeadRb = stickHead.GetComponent<Rigidbody>();
 
 
@@ -63,22 +53,24 @@ public class drumInteraction : MonoBehaviour
     {
         distanceFromHitPos = Vector3.Distance(positionOnExit, stickHead.position);
 
+
+        //to avoid hitting accidentally or repeatedly the drum
+        // because it's important to keep track of the number of times the dum was hit
+        // to know which animation or interaction is played 
+        // and have more control on them 
+
+        //If the drum stick is waved away from the hide a certain distance only then loaded is set to true and
+        // we allow a second hit 
         if (distanceFromHitPos > reloadDist)
         {
             loaded = true;
         }
     }
-    private void initialiseControllers()
-    {
 
-        attachedDevices = new List<InputDevice>();
-        InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.Controller, attachedDevices);
-        if (attachedDevices.Count > 0)
-        {
-            targetDevice = attachedDevices[0];
-        }
 
-    }
+    // The moment the stickhead leaves the collider we record its position
+    // we need this position to keep track of the distance the stick is travelling away from the drum
+    // and set the boolean value "loaded" to true
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag == "stick")
@@ -93,10 +85,15 @@ public class drumInteraction : MonoBehaviour
     {
         if (loaded)
         {
-            loaded = false;
+            
+            loaded = false; // immediatley sets the loaded value to false 
+
+
             if (collision.gameObject.tag == "stick")
             {
                 Debug.Log("collision is detected");
+
+                // gets the velocity of the stick which is similar to the hit force
                     float hitForce = stickHeadRb.GetPointVelocity(transform.TransformPoint(stickHead.position)).magnitude / 100;
 
 
@@ -105,7 +102,10 @@ public class drumInteraction : MonoBehaviour
                         numberOfHits++;
 
                         gameManager.Instance.numberOfHits++;
-                        if (numberOfHits % phaseThreshold == 0)
+
+
+
+                        if (numberOfHits % phaseThreshold == 0)//each "phaseThreshold" number of hits we pass to the next phase
                         {
 
                             if (phaseNum < gameManager.Instance.Phases.Length)
@@ -130,42 +130,12 @@ public class drumInteraction : MonoBehaviour
                         // lightmanager?._hitdrum.Invoke(hitForce, hitPos, numberOfHits);
 
 
-                        hapticFeedback(hitForce);
 
                         // myMaterial.color = new Color(5 * distFromCenter, 0, 0);
 
 
                     }
-                lastTime = Time.fixedTime;
             }
-        }
-    }
-    void hapticFeedback(float hitForce)
-    {
-        Debug.Log("hitforce  " + hitForce);
-        if (!targetDevice.isValid)
-        {
-            initialiseControllers();
-        }
-
-        InputDevice rightController = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
-        rightController.TryGetFeatureValue(CommonUsages.grip, out float gripValue);
-
-        Debug.Log(gripValue);
-
-        if (gripValue == 1)
-        {
-            Debug.Log(rightController.characteristics);
-            Debug.Log("haptick Feedback");
-            float amplitude = 2 + hitForce / (2 * MaximumHitForce);
-            float duration = 2 * hitForce / (MaximumHitForce);
-
-            Debug.Log("ampl" + amplitude);
-            Debug.Log("duration" + duration);
-            HapticCapabilities capabilities;
-            if (rightController.TryGetHapticCapabilities(out capabilities))
-                if (capabilities.supportsImpulse)
-                    rightController.SendHapticImpulse(0, 1, duration);
         }
     }
 }

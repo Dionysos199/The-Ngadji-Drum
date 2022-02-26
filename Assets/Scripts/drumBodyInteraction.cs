@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR;
 
-//Attach this script to any GameObject in your scene to spawn a cube and change the material color
 [System.Serializable]
 public class  InsideInfluenceArea:UnityEvent<List<Vector3>,bool>
 {
@@ -56,6 +55,11 @@ public class drumBodyInteraction : MonoBehaviour
 
    
 
+        // if the hands are within a certain range of the drum 
+        //the insideinfluencearea delegate is invoked
+        // this event wasn't necessary just practicing more the observer pattern
+        // listeners are not many 
+        // emissive material
         if (inside==true)
         {
             insideInfluenceArea.Invoke(positions, inside);

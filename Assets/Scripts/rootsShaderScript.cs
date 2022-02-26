@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class rootsShaderScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public Material[] material;
+    public Material[] material;//made different copies from the same material and added each to a different material
 
-    public float resolution;
-    public float increment=.2f;
+    public float resolution; //controls how detailed and smooth the animation is 
+    public float increment=.2f; // parameter that controls how fast the animation goes
 
-    public GameObject[] trees;
+    public GameObject[] trees; //array of the trees that will evolve on the scene 
+
     public float appearingSpeed;
 
     public soundManager soundManager;
@@ -22,7 +22,12 @@ public class rootsShaderScript : MonoBehaviour
     {
         foreach (var _material in material)
         {
-            _material.SetFloat("Vector1_7C536670", 1);
+            _material.SetFloat("Vector1_7C536670", 1); //Vector1_7C536670 is the property  in the shader graph that controls
+            //how much of the tree appears
+            //it's a float value between 0 and 1
+            // a max value of one corresponds to total dissolving 
+            // a min value of zero corresponds to complete appearance 
+            // so at the beginning we set it to 1 in all the materials to make all the trees invisible at the start of the experience
         }
        
 
@@ -36,7 +41,7 @@ public class rootsShaderScript : MonoBehaviour
 
     public void appear(float a, Vector3 b, int index)
     {
-        if (gameManager.Instance.Phase=="Phase2")
+        if (gameManager.Instance.Phase=="Phase2") // if the second phase is reached 
         {
             int n = index % material.Length;
 
@@ -52,7 +57,7 @@ public class rootsShaderScript : MonoBehaviour
                 //calls the fn inside the sound Manager instance attached to this object
                 soundManager.playTheRootsGrowSounds(trees[p].GetComponent<Transform>());
             }
-            coroutine = WaitAndPrint(1 / resolution, 0, appearingSpeed, n);
+            coroutine = growTreeAnimation(1 / resolution, 0, appearingSpeed, n);
             if (coroutine != null)
                 StartCoroutine(coroutine);
         }
@@ -61,7 +66,11 @@ public class rootsShaderScript : MonoBehaviour
 
 
     // every 2 seconds perform the print()
-    private IEnumerator WaitAndPrint(float waitTime, float time,float m, int index)
+
+    //coroutine for animating the dissolving/appearing trees when called 
+    private IEnumerator growTreeAnimation(float waitTime, float time,float m, int index)
+        //waittime is the resoltion because its how frequent the coroutine is called
+        //index to know which material/ on which tree we are doing the shader effect
     {
         float value = material[index].GetFloat("Vector1_7C536670");
         Debug.Log("index "+index);
@@ -69,8 +78,9 @@ public class rootsShaderScript : MonoBehaviour
         {
             time+=increment;
             // value = 1-Mathf.Exp(-m*time)*m*time*2.7f;
-             value = Mathf.Exp( -time);
-            Debug.Log("value "+value);
+             value = Mathf.Exp( -time); //the exponential function is perfect for fast fading out values
+            //the value fades fastly to zero causing the corresponding material on the tree to appear
+
             material[index].SetFloat("Vector1_7C536670", value);
 
             yield return new WaitForSeconds(waitTime);

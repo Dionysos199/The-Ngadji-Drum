@@ -16,7 +16,7 @@ public class gameManager : MonoBehaviour
         Debug.Log(Phase);
     }
 
-    // Start is called before the first frame update
+// Making this class a singleton
     private void Awake()
     {
         if (Instance == null)
@@ -34,15 +34,5 @@ public class gameManager : MonoBehaviour
     void Start()
     {
         Phases = new string[] { "Phase1", "Phase2", "Phase3", "Phase4", "Phase5" };
-    }
-
-
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
