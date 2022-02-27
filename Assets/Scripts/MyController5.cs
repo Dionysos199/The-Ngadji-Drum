@@ -97,20 +97,20 @@ public class MyController5 : MonoBehaviour
 
             if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
             {
-                handAnimator.SetFloat("valTrigger", triggerValue);
+                //handAnimator.SetFloat("valTrigger", triggerValue);
             }
             else
             {
-                handAnimator.SetFloat("valTrigger", 0);
+                //handAnimator.SetFloat("valTrigger", 0);
             }
 
             if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
             {
-                handAnimator.SetFloat("valGrip", gripValue);
+                //handAnimator.SetFloat("valGrip", gripValue);
             }
             else
             {
-                handAnimator.SetFloat("valGrip", 0);
+                //handAnimator.SetFloat("valGrip", 0);
             }
 
             if (targetDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 Primary2DAxisValue)

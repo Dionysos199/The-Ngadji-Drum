@@ -48,7 +48,7 @@ public class controller : MonoBehaviour
             Debug.Log(rightController.characteristics);
             Debug.Log("haptick Feedback");
             float amplitude = 2 + hitForce / (2 * MaximumHitForce);
-            float duration = 2 * hitForce / (MaximumHitForce);
+            float duration =  hitForce / (MaximumHitForce);
 
             Debug.Log("ampl" + amplitude);
             Debug.Log("duration" + duration);
